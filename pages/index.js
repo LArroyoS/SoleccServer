@@ -17,8 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Editar
-          Get started by editing{' '}
+          va de nuevo
           <code className={styles.code}>pages/index.js</code>
         </p>
 
