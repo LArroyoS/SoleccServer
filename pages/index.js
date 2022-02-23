@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          va de nuevo
+          otro cambio
           <code className={styles.code}>pages/index.js</code>
         </p>
 
