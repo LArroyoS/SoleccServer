@@ -22,8 +22,8 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="./api/formulario.js" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
+          <a href="./api/formulario" className={styles.card}>
+            <h2>Formulario &rarr;</h2>
             <p>Prueba Formulario.</p>
           </a>
 
