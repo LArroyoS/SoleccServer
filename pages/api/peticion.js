@@ -14,5 +14,5 @@ const DELETE = () => {
 }
 
 export default function Formulario(req, res){
-  res.status(200).json( { funciona: ok} );
+  res.status(200).json( { funciona: "ok" } );
 }
