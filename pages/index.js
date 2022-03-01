@@ -7,11 +7,8 @@ export default function Home() {
   }
   const click = async () => {
     const res = await fetch(`https://solecc-next.netlify.app/api/peticion/`+peticion,
-      { method: peticion,
-        body: { peticionBody: post },
-        headers:{
-          'Content-Type': 'application/json'
-        }
+      { 
+        method: peticion,
       }
     );
     const mensaje = JSON.stringify(res);
