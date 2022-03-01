@@ -19,7 +19,7 @@ export default function Home() {
         <option value="PUT">GET</option>
         <option value="DELETE">GET</option>
       </select>
-      <button onclick={click}>enviar</button>
+      <button onClick={click}>enviar</button>
     </div>
   )
 }
