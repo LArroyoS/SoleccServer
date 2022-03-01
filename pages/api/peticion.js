@@ -1,43 +1,33 @@
-const GET = (req,res) => {
-  const query = req.query;
-  res.status(200).json({petecion: "GET"});
+const GET = () => {
+  return "GET";
 }
 
-const POST = (req,res) => {
-  const body = req.body;
-  res.status(200).json({petecion: "POST"});
+const POST = () => {
+  return "POST";
 }
-const PUT = (req,res) => {
-  const query = req.query;
-  const body = req.body;
-  res.status(200).json({petecion: "PUT"});
+const PUT = () => {
+  return "DELETE";
 }
 
-const DELETE = (req,res) => {
-  const query = req.query;
-  res.status(200).json({petecion: "delete"});
-}
-
-const DEFAULT = (req,res) => {
-  res.status(405).json({ peticion: "nulo" });
+const DELETE = () => {
+  return "DELETE";
 }
 
 export default function Formulario(req, res){
+  var respuesta = { peticion: "default" };
   switch(req.method){
     case "GET":
-      GET(req,res);
+      respuesta.peticion =  GET();
     break;
     case "POST":
-      POST(req,res); 
+      respuesta.peticion = POST(); 
     break;
     case "PUT":
-      PUT(req,res); 
+      respuesta.peticion = PUT(); 
     break;
     case "DELETE":
-      DELETE(req,res); 
-    break;
-    default:
-      DEFAULT(req,res); 
+      respuesta.peticion = DELETE(); 
     break;
   }
+  res.status(200).json( respuesta );
 }
