@@ -22,6 +22,6 @@ const DEFAULT = (req,res) => {
   res.status(405).json({ peticion: "nulo" });
 }
 
-export default function Formulario (req, res){
+export default function Formulario(req, res){
   res.status(200).json({ peticion: "nulo" });
 }
