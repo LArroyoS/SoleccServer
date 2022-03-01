@@ -23,5 +23,21 @@ const DEFAULT = (req,res) => {
 }
 
 export default function Formulario(req, res){
-  res.status(200).json({ peticion: "nulo" });
+  switch(req.method){
+    case "GET":
+      GET(req,res);
+    break;
+    case "POST":
+      POST(req,res); 
+    break;
+    case "PUT":
+      PUT(req,res); 
+    break;
+    case "DELETE":
+      DELETE(req,res); 
+    break;
+    default:
+      DEFAULT(req,res); 
+    break;
+  }
 }
