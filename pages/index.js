@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [peticion, setPeticion] = useState("");
+  const [respuesta, setRespuesta] = useState({});
   const cambio = ({ target }) => {
     setPeticion(target.value);
   }
@@ -11,8 +12,7 @@ export default function Home() {
         method: peticion
       }
     );
-    const mensaje = JSON.stringify(res);
-    alert(mensaje);
+    setRespuesta(res.json());
   }
   return (
     <div>
@@ -28,6 +28,8 @@ export default function Home() {
       </select>
       <br></br>
       <button onClick={click}>enviar</button>
+      <br></br>
+      <h2>Respuesta { JSON.stringify(respuesta) }</h2>
     </div>
   )
 }
