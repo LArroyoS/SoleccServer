@@ -6,7 +6,8 @@ export default function Home() {
     setPeticion(target.value);
   }
   const click = () => {
-    alert("tu peticion es ");
+    const mensaje = "tu peticion es "+((peticion)? peticion:"Nula"); 
+    alert(mensaje);
   }
   return (
     <div>
