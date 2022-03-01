@@ -6,9 +6,9 @@ export default function Home() {
     setPeticion(target.value);
   }
   const click = async () => {
-    const res = await fetch(`https://solecc-next.netlify.app/api/peticion`);
-    const mensaje = await res.json();
-    alert(mensaje);
+    const res = await fetch(`https://solecc-next.netlify.app/api/peticion`)
+      .then(result => alert(res.json()))
+      .catch(error => alert(error.json()));
   }
   return (
     <div>
