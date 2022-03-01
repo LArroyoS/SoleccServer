@@ -7,8 +7,8 @@ export default function Home() {
   }
   const click = async () => {
     const res = await fetch(`https://solecc-next.netlify.app/api/peticion`)
-      .then((result) => alert(result.json()))
-      .catch((error) => alert(error.json()));
+      .then((result) => alert(result))
+      .catch((error) => alert(error));
   }
   return (
     <div>
