@@ -6,7 +6,8 @@ export default function Home() {
     setPeticion(target.value);
   }
   const click = () => {
-    const mensaje = "tu peticion es "+((peticion)? peticion:"Nula"); 
+    const res = await fetch(`https://solecc-next.netlify.app/api/peticion`);
+    const mensaje = res.json();
     alert(mensaje);
   }
   return (
