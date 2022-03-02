@@ -33,6 +33,7 @@ export default function Home() {
       const data = await res.json();
       // Pass data to the page via props
       setRespuesta(data);
+      alert("funciona");
     }
   }
 
