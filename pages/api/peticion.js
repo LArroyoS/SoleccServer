@@ -6,7 +6,7 @@ const POST = () => {
   return "POST";
 }
 const PUT = () => {
-  return "DELETE";
+  return "PUT";
 }
 
 const DELETE = () => {
@@ -27,6 +27,9 @@ export default function Formulario(req, res){
     break;
     case "DELETE":
       respuesta = DELETE(); 
+    break;
+    default:
+      respuesta = "default";
     break;
   }
   res.status(200).json( { peticion: respuesta } );
