@@ -22,7 +22,11 @@ export default function Home() {
     }
     else{
       // Fetch data from external API
-      const res = await fetch(ruta
+      const res = await fetch(ruta,
+        { 
+          method: metodo,
+          body: { datos: metodo }
+        }
       );
       const data = await res.json();
       // Pass data to the page via props
