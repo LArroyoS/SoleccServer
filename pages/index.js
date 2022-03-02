@@ -12,7 +12,7 @@ export default function Home() {
       { method: peticion,
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
         body: { datos: peticion }
       }
     );
