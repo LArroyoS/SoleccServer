@@ -17,16 +17,16 @@ export default function Formulario(req, res){
   var respuesta = "default";
   switch(req.method){
     case "GET":
-      respuesta.peticion =  GET();
+      respuesta =  GET();
     break;
     case "POST":
-      respuesta.peticion = POST(); 
+      respuesta = POST(); 
     break;
     case "PUT":
-      respuesta.peticion = PUT(); 
+      respuesta = PUT(); 
     break;
     case "DELETE":
-      respuesta.peticion = DELETE(); 
+      respuesta = DELETE(); 
     break;
   }
   res.status(200).json( { peticion: respuesta } );
