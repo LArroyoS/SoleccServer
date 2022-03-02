@@ -2,11 +2,10 @@
 //dbConexion();
 
 const GET = () => {
-  return "GET";
+  return "GET Elemento";
 }
-
 const POST = () => {
-  return "POST";
+  return "POST Actualizar";
 }
 const PUT = () => {
   return "PUT";
