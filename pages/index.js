@@ -11,8 +11,9 @@ export default function Home() {
     const res = await fetch('https://solecc-next.netlify.app/api/peticion',
       { method: peticion,
         headers: {
-          
+          'Content-Type': 'application/json'
         }
+        body: { datos: peticion }
       }
     );
     const data = await res.json();
