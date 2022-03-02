@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [peticion, setPeticion] = useState("Nula");
-  const [respuesta, setRespuesta] = useState({ peticion: "default" });
+  const [respuesta, setRespuesta] = useState("Seleccione una opcion");
   const [ruta, setRuta] = useState("")
+  const [metodo, setMetodo] = useState(null)
   const rutaConstante = "https://solecc-next.netlify.app/api/peticion/";
   
   const cambio = ({ target }) => {
     const valor = target.value;
-    const metodo = valor.replace("ALL","");
+    setMetodo(valor.replace("ALL",""));
     setPeticion(valor);
     setRuta(
       (valor=="GETALL" || valor=="POSTALL")? 
@@ -16,19 +17,23 @@ export default function Home() {
     );
   }
   const click = async () => {
-    const metodo = peticion.replace("ALL","");
-    // Fetch data from external API
-    const res = await fetch(ruta,
-      { method: metodo,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: { datos: metodo }
-      }
-    );
-    const data = await res.json();
-    // Pass data to the page via props
-    setRespuesta(data);
+    if(metodo=="Nula"){
+      setRespuesta("Seleccione una opcion");
+    }
+    else{
+      // Fetch data from external API
+      const res = await fetch(ruta,
+        { method: metodo,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: { datos: metodo }
+        }
+      );
+      const data = await res.json();
+      // Pass data to the page via props
+      setRespuesta(data);
+    }
   }
 
   return (
