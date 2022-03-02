@@ -25,7 +25,10 @@ export default function Home() {
       const res = await fetch(ruta,
         { 
           method: metodo,
-          body: { datos: metodo }
+          body: JSON.stringify({ datos: metodo }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
         }
       );
       const data = await res.json();
