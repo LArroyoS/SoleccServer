@@ -7,8 +7,9 @@ export default function Home() {
     setPeticion(target.value);
   }
   const click = async () => {
+    const id = (peticion!="POST")? peticion:"";
     // Fetch data from external API
-    const res = await fetch('https://solecc-next.netlify.app/api/peticion',
+    const res = await fetch('https://solecc-next.netlify.app/api/peticion/'+id,
       { method: peticion,
         headers: {
           'Content-Type': 'application/json'
