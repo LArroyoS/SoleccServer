@@ -55,6 +55,7 @@ export default function Home() {
       <br></br>
       <h3>Peticion { peticion }</h3>
       <h3>Ruta { ruta }</h3>
+      <h3>Metodo { metodo }</h3>
       <br></br>
       <h2>Respuesta { JSON.stringify(respuesta) }</h2>
     </div>
