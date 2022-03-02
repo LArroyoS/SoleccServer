@@ -18,15 +18,14 @@ export default function Home() {
   }
   const click = async () => {
     if(metodo=="Nula"){
+      alert("nulo");
       setRespuesta("Seleccione una opcion");
     }
     else{
+      alert("peticion");
       // Fetch data from external API
       const res = await fetch(ruta,
         { method: metodo,
-          headers: {
-            'Content-Type': 'application/json'
-          },
           body: { datos: metodo }
         }
       );
