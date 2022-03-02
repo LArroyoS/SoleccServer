@@ -1,6 +1,5 @@
-import dbConexion from "../../utilidades/conexion";
-
-dbConexion();
+//import dbConexion from "../../utilidades/conexion";
+//dbConexion();
 
 const GET = () => {
   return "GET";
