@@ -8,18 +8,18 @@ const GET = () => {
     return "GET Todo";
 }
   
-export default function Formulario(req, res){
+export default function Index(req, res){
     const query = req.query;
     const body = req.body;
     switch(req.method){
         case "POST":
-        respuesta = POST(); 
+            respuesta = POST(); 
         break;
         case "GET":
-        respuesta = GET(); 
+            respuesta = GET(); 
         break;
         default:
-        respuesta = "default";
+            respuesta = "default";
         break;
     }
     res.status(200).json( { 
