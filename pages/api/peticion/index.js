@@ -9,7 +9,16 @@ const GET = () => {
 }
   
 export default function Index(req, res){
+    var respuesta = "";
+    switch(req.method){
+        case "POST":
+            respuesta = POST(); 
+        break;
+        default:
+            respuesta = GET(); 
+        break;
+    }
     res.status(200).json( { 
-        index: "respuesta"
+        peticion: respuesta
     });
 }
