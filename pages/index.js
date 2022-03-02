@@ -6,13 +6,16 @@ export default function Home() {
   const [ruta, setRuta] = useState("")
   const rutaConstante = "https://solecc-next.netlify.app/api/peticion/";
   const cambio = ({ target }) => {
-    setPeticion(target.value);
-  }
-  const click = async () => {
+    
     const metodo = peticion.replace("ALL","");
     const id = (peticion!="POST")? peticion:"";
-    const setRuta = (peticion=="GETALL" || peticion=="POSTALL")? 
+    setPeticion(target.value);
+    setRuta(
+      (peticion=="GETALL" || peticion=="POSTALL")? 
       rutaConstante : rutaConstante+id
+    );
+  }
+  const click = async () => {
     // Fetch data from external API
     const res = await fetch(ruta,
       { method: metodo,
