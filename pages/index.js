@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 
 export default function Home() {
-  const [peticion, setPeticion] = useState("DEFAULT");
+  const [peticion, setPeticion] = useState("Nula");
   const [respuesta, setRespuesta] = useState({ peticion: "default" });
+  const [ruta, setRuta] = useState("")
+  const rutaConstante = "https://solecc-next.netlify.app/api/peticion/";
   const cambio = ({ target }) => {
     setPeticion(target.value);
   }
   const click = async () => {
     const metodo = peticion.replace("ALL","");
     const id = (peticion!="POST")? peticion:"";
-    const ruta = "https://solecc-next.netlify.app/api/peticion/"
-    const rutaFinal = (peticion=="GETALL" || peticion=="POSTALL")? 
-      ruta : ruta+id
+    const setRuta = (peticion=="GETALL" || peticion=="POSTALL")? 
+      rutaConstante : rutaConstante+id
     // Fetch data from external API
     const res = await fetch(ruta,
       { method: metodo,
@@ -31,7 +32,7 @@ export default function Home() {
       <label>Tipo de peticion</label>
       <br></br>
       <select name="peticion" onChange={cambio}>
-        <option value="DEFAULT">--Seleccione un tipo formulario--</option>
+        <option value="Nula">--Seleccione un tipo formulario--</option>
         <option value="GETALL">GET</option>
         <option value="GET">GET</option>
         <option value="POSTALL">POST</option>
@@ -43,6 +44,7 @@ export default function Home() {
       <button onClick={click}>enviar</button>
       <br></br>
       <h3>Peticion { peticion }</h3>
+      <h3>Ruta { ruta }</h3>
       <br></br>
       <h2>Respuesta { JSON.stringify(respuesta) }</h2>
     </div>
