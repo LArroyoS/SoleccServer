@@ -5,14 +5,14 @@ export default function Home() {
   const [respuesta, setRespuesta] = useState({ peticion: "default" });
   const [ruta, setRuta] = useState("")
   const rutaConstante = "https://solecc-next.netlify.app/api/peticion/";
+  
   const cambio = ({ target }) => {
-    
+    const valor = target.value
     const metodo = peticion.replace("ALL","");
-    const id = (peticion!="POST")? peticion:"";
-    setPeticion(target.value);
+    setPeticion(valor);
     setRuta(
-      (peticion=="GETALL" || peticion=="POSTALL")? 
-      rutaConstante : rutaConstante+id
+      (valor=="GETALL" || valor=="POSTALL")? 
+      rutaConstante : rutaConstante+valor
     );
   }
   const click = async () => {
@@ -29,6 +29,7 @@ export default function Home() {
     // Pass data to the page via props
     setRespuesta(data);
   }
+
   return (
     <div>
       <h1>Formulario</h1>
