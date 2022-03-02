@@ -10,7 +10,6 @@ const POST = () => {
 const PUT = () => {
   return "PUT";
 }
-
 const DELETE = () => {
   return "DELETE";
 }
@@ -18,11 +17,8 @@ const DELETE = () => {
 export default function Formulario(req, res){
   const query = req.query;
   const body = req.body;
-  var respuesta = "default";
+  var respuesta = "";
   switch(req.method){
-    case "GET":
-      respuesta =  GET();
-    break;
     case "POST":
       respuesta = POST(); 
     break;
@@ -33,12 +29,12 @@ export default function Formulario(req, res){
       respuesta = DELETE(); 
     break;
     default:
-      respuesta = "default";
+      respuesta =  GET();
     break;
   }
   res.status(200).json( { 
     peticion: respuesta,
     query: query,
     body: body
-  } );
+  });
 }

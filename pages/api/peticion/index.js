@@ -9,6 +9,7 @@ const GET = () => {
 }
   
 export default function Index(req, res){
+    const body = req.body;
     var respuesta = "";
     switch(req.method){
         case "POST":

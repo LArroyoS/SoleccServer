@@ -7,14 +7,18 @@ export default function Home() {
     setPeticion(target.value);
   }
   const click = async () => {
+    const metodo = peticion.replace("ALL","");
     const id = (peticion!="POST")? peticion:"";
+    const ruta = "https://solecc-next.netlify.app/api/peticion/"
+    const rutaFinal = (peticion=="GETALL" || peticion=="POSTALL")? 
+      ruta : ruta+id
     // Fetch data from external API
-    const res = await fetch('https://solecc-next.netlify.app/api/peticion/'+id,
-      { method: peticion,
+    const res = await fetch(ruta,
+      { method: metodo,
         headers: {
           'Content-Type': 'application/json'
         },
-        body: { datos: peticion }
+        body: { datos: metodo }
       }
     );
     const data = await res.json();
@@ -28,7 +32,9 @@ export default function Home() {
       <br></br>
       <select name="peticion" onChange={cambio}>
         <option value="DEFAULT">--Seleccione un tipo formulario--</option>
+        <option value="GETALL">GET</option>
         <option value="GET">GET</option>
+        <option value="POSTALL">POST</option>
         <option value="POST">POST</option>
         <option value="PUT">PUT</option>
         <option value="DELETE">DELETE</option>
