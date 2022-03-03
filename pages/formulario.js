@@ -8,11 +8,11 @@ export default function VerFormulario() {
 
   useEffect(() => {
     setSelect(Tablas.tablas);
-  });
+  },[tabla]);
 
   const opcionesTablas = () => {
     return select.map((value) => {
-      return <option value={value}>{value}</option>;
+      return <option key={value} value={value}>{value}</option>;
     });
   };
 
