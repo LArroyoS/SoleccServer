@@ -1,5 +1,5 @@
 import React from "react";
-import tablas from "../modelos/estatico/tablas";
+import tablas from "../modelos/estatico/tablas.js";
 
 export default function PruebaFormulario() {
   const cambio = () => {
