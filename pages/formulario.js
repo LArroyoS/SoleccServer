@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Agregar from "../componentes/formulario";
 import * as Tablas from "../modelos/estaticos/tablas";
 
-export default function verFormulario() {
+export default function VerFormulario() {
   const [select, setSelect] = useState([]);
   const [tabla, setTabla] = useState("");
 
