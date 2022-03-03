@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PruebaPeticion from "../componentes/pruebaPeticion";
 
 export default function Home() {
