@@ -1,6 +1,7 @@
 import React from "react";
+import tablas from "../modelos/estatico/tabla";
 
-export default function PruebaFormulario({ tablas }) {
+export default function PruebaFormulario() {
   const cambio = () => {
     alert("cambio");
   }
