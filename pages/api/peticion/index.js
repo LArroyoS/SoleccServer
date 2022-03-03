@@ -2,7 +2,7 @@
 //dbConexion();
 
 const POST = () => {
-    return "POST";
+    return "POST Solo";
 }
 const GET = () => {
     return "GET Todo";

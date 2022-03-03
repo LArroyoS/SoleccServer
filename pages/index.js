@@ -21,13 +21,14 @@ export default function Home() {
       setRespuesta("Seleccione una opcion");
     }
     else{
+      var res = null;
       // Fetch data from external API
       switch(metodo){
         case "GET":
-          const res = await fetch(ruta);
+          res = await fetch(ruta);
         break;
         default:
-          const res = await fetch(ruta,
+          res = await fetch(ruta,
             { 
               method: metodo,
               body: JSON.stringify({ datos: metodo }),
