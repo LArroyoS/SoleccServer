@@ -22,15 +22,22 @@ export default function Home() {
     }
     else{
       // Fetch data from external API
-      const res = await fetch(ruta,
-        { 
-          method: metodo,
-          body: JSON.stringify({ datos: metodo }),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      switch(metodo){
+        case "GET":
+          const res = await fetch(ruta);
+        break;
+        default:
+          const res = await fetch(ruta,
+            { 
+              method: metodo,
+              body: JSON.stringify({ datos: metodo }),
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            }
+          );
+        break;
+      }
       const data = await res.json();
       // Pass data to the page via props
       setRespuesta(data);
