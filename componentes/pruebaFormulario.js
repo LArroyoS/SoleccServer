@@ -1,8 +1,9 @@
 import React from "react";
+import tablas from "../modelos/estatico/tablas";
 
 export default function PruebaFormulario() {
   const cambio = () => {
-    
+    alert("cambio");
   }
   return (
     <div>
