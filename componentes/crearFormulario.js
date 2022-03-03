@@ -1,8 +1,8 @@
 import React from "react";
 
 //const peticion = require('../controladores/peticiones.servidor');
-import * as peticion from "../modelos/estaticos/ListasPruebas";
-import * as modelo from "../modelos/estaticos/modelos";
+const peticion = require("../modelos/estaticos/ListasPruebas");
+const  modelo = require("../modelos/estaticos/modelos");
 
 const ConstruirFormulario = ({
   formulario,
