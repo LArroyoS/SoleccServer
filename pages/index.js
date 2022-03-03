@@ -11,9 +11,9 @@ export default function Home() {
   } 
   return (
     <div>
-      <select onChages={cambio}>
-        <option value="1">Prueba Peticion</option>
-        <option value="2">Formularios</option>
+      <select onChange={cambio}>
+        <option value={1}>Prueba Peticion</option>
+        <option value={2}>Formularios</option>
       </select>
       {(componente=="1")? 
         (<PruebaPeticion></PruebaPeticion>)
