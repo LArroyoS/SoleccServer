@@ -7,7 +7,7 @@ export default function Home() {
   const [componente,setComponente] = useState(1);
 
   const cambio = ({ target }) => {
-    setPeticion(target.value);
+    setComponente(target.value);
   } 
   return (
     <div>
