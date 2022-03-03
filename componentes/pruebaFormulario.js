@@ -1,7 +1,6 @@
 import React from "react";
-import tablas from "../modelos/estatico/tablas.js";
 
-export default function PruebaFormulario() {
+export default function PruebaFormulario({ tablas }) {
   const cambio = () => {
     alert("cambio");
   }
@@ -18,6 +17,7 @@ export default function PruebaFormulario() {
         <option value="PUT">PUT</option>
         <option value="DELETE">DELETE</option>
       </select>
+      <h4>{ JSON.stringify(tablas) }</h4>
     </div>
   )
 }

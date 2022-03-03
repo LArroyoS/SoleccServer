@@ -1,6 +1,8 @@
 import React, {useState} from "react";
+
 import PruebaPeticion from "../componentes/pruebaPeticion";
 import PruebaFormulario from "../componentes/pruebaFormulario";
+import tablas from "../modelos/estatico/tablas.js";
 
 export default function Home() {
 
@@ -18,7 +20,7 @@ export default function Home() {
       {(componente=="1")? 
         (<PruebaPeticion></PruebaPeticion>)
         :
-        (<PruebaFormulario></PruebaFormulario>)
+        (<PruebaFormulario tablas={tablas}></PruebaFormulario>)
       }
     </div>
   )
