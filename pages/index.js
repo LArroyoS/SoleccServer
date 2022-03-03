@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import PruebaPeticion from "../componentes/pruebaPeticion";
 import PruebaFormulario from "../componentes/pruebaFormulario";
-import tablas from "../modelos/estatico/tablas.js";
+import tablas from "../modelos/estatico/tabla";
 
 export default function Home() {
 
