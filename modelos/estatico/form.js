@@ -1,4 +1,4 @@
-const formularios = {
+const form = {
 	"almacenes": [
 		{
 			"type":"text",
