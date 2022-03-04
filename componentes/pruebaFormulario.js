@@ -9,7 +9,7 @@ export default function PruebaFormulario() {
   }
   const opciones = () => {
     return tablas.map((value) => {
-      return <opcion value={value}>{value}</opcion>
+      return <option value={value}>{value}</option>
     });
   }
   return (
