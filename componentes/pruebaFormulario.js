@@ -9,8 +9,8 @@ export default function PruebaFormulario() {
   const [objeto, setObjeto] = useState({});
 
   useEffect(() => {
-    setFormulario(formularios.formularios[tabla]);
-    setObjeto(modelo.modelo[tabla]);
+    setFormulario(form[tabla]);
+    setObjeto(modelo[tabla]);
   }, [tabla]);
 
   const cambio = ({ target }) => {
@@ -29,7 +29,7 @@ export default function PruebaFormulario() {
   const onChangeValueSelect = (nombre, value) => {
     setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
   };
-  
+
   return (
     <div>
       <h1>Prueba Formulario</h1>
