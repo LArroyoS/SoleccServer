@@ -1,5 +1,7 @@
 import React from "react";
 import tablas from "../modelos/estatico/tabla";
+import modelo from "../modelos/estatico/modelo";
+import form from "../modelos/estatico/form";
 
 export default function PruebaFormulario() {
   const cambio = () => {
@@ -19,6 +21,8 @@ export default function PruebaFormulario() {
         <option value="DELETE">DELETE</option>
       </select>
       <h4>{ JSON.stringify(tablas) }</h4>
+      <h4>{ JSON.stringify(modelo) }</h4>
+      <h4>{ JSON.stringify(form) }</h4>
     </div>
   )
 }
