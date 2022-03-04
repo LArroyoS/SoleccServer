@@ -17,6 +17,9 @@ export default function PruebaFormulario() {
   const cambio = ({ target }) => {
     setTabla(target.value);
   }
+  const guardar = () => {
+    alert("se guardo");
+  }
   const opciones = () => {
     return tablas.map((value) => {
       return <option value={value}>{value}</option>
