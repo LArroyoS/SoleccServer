@@ -78,6 +78,7 @@ const ConstruirFormulario = ({
                 <option value=""> {"--- " + item.nombre + " ---"} </option>
                 {selectItems(item.tabla, 4)}
               </select>
+              {selectItems(item.tabla, 4)}
             </div>
           );
           break;
