@@ -10,20 +10,12 @@ const ConstruirFormulario = ({
   onChangeValueSelect
 }) => {
   const selectItems = (tabla) => {
-    return (
-      <div>
-        <h2> { tabla } </h2>
-        <h2> { JSON.stringify( modelo[tabla]) } </h2>
-        <h3> { JSON.stringify(crearDatos(tabla,modelo[tabla],4))} </h3>
-      </div>
-    );
-    /*const obtenerLista = peticion.datos(tabla, modelo[tabla], 4);
+    const obtenerLista = crearDatos(tabla, modelo[tabla], 4);
     return obtenerLista.map((item) => {
       return (
         <option value={JSON.stringify(item)}> {item.toString.title} </option>
       );
     });
-    */
   };
 
   return (
@@ -84,7 +76,6 @@ const ConstruirFormulario = ({
                 <option value=""> {"--- " + item.nombre + " ---"} </option>
                 {selectItems(item.tabla, 4)}
               </select>
-              {selectItems(item.tabla, 4)}
             </div>
           );
           break;
