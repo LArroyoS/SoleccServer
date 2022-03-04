@@ -12,17 +12,11 @@ export default function PruebaFormulario() {
       <h1>Prueba Formulario</h1>
       <label>Tipo de peticion</label>
       <select name="peticion" onChange={cambio}>
-        <option value="Nula">--Seleccione un tipo formulario--</option>
-        <option value="GETALL">GET</option>
-        <option value="GET">GET</option>
-        <option value="POSTALL">POST</option>
-        <option value="POST">POST</option>
-        <option value="PUT">PUT</option>
-        <option value="DELETE">DELETE</option>
+        <option value="Nula">--Seleccione un tabla--</option>
       </select>
-      <h4>{ JSON.stringify(tablas) }</h4>
-      <h4>{ JSON.stringify(modelo) }</h4>
-      <h4>{ JSON.stringify(form) }</h4>
+      <h4>tablas: { JSON.stringify(tablas) }</h4>
+      <h4>modelo: { JSON.stringify(modelo) }</h4>
+      <h4>formularios: { JSON.stringify(form) }</h4>
     </div>
   )
 }
