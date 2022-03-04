@@ -14,7 +14,7 @@ const ConstruirFormulario = ({
       <div>
         <h2> { tabla } </h2>
         <h2> { JSON.stringify( modelo[tabla]) } </h2>
-        <h3> { JSON.stringify(crearDatos(tabla,modelo[tabla]))} </h3>
+        <h3> { JSON.stringify(crearDatos(tabla,modelo[tabla],4))} </h3>
       </div>
     );
     /*const obtenerLista = peticion.datos(tabla, modelo[tabla], 4);
