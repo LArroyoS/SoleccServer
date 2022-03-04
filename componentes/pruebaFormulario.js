@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import tablas from "../modelos/estatico/tabla";
 import modelo from "../modelos/estatico/modelo";
 import form from "../modelos/estatico/form";
 
 export default function PruebaFormulario() {
-  const cambio = () => {
-    alert("cambio");
+  const [tabla,setTabla] = useState("");
+  const cambio = ({ target }) => {
+    setTabla(target.value);
   }
   const opciones = () => {
     return tablas.map((value) => {
@@ -20,7 +21,7 @@ export default function PruebaFormulario() {
         <option value="">--Seleccione un tabla--</option>
         { opciones() }
       </select>
-      <h4>tablas: { JSON.stringify(tablas) }</h4>
+      <h4>tabla: { tabla }</h4>
     </div>
   )
 }
