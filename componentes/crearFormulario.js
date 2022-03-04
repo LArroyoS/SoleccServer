@@ -10,7 +10,12 @@ const ConstruirFormulario = ({
   onChangeValueSelect
 }) => {
   const selectItems = (tabla) => {
-    return JSON.stringify(crearDatos(tabla,modelo[tabla]))
+    return (
+      <div>
+        <h2> { modelo[tabla]} </h2>
+        <h3> { JSON.stringify(crearDatos(tabla,modelo[tabla]))} </h3>
+      </div>
+    );
     /*const obtenerLista = peticion.datos(tabla, modelo[tabla], 4);
     return obtenerLista.map((item) => {
       return (
