@@ -8,7 +8,7 @@ export default function PruebaFormulario() {
     alert("cambio");
   }
   const opciones = () => {
-    return modelo.map((value) => {
+    return tablas.json().map((value) => {
       return <opcion value={value}>{value}</opcion>
     });
   }
@@ -21,8 +21,6 @@ export default function PruebaFormulario() {
         { opciones() }
       </select>
       <h4>tablas: { JSON.stringify(tablas) }</h4>
-      <h4>modelo: { JSON.stringify(modelo) }</h4>
-      <h4>formularios: { JSON.stringify(form) }</h4>
     </div>
   )
 }
