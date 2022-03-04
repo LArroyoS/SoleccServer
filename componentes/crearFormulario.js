@@ -1,7 +1,7 @@
 import React from "react";
 
 import crearDatos from "../control/generarDatos";
-import modelo from "../modelos/estatico/form";
+import modelo from "../modelos/estatico/modelo";
 
 const ConstruirFormulario = ({
   formulario,
@@ -12,7 +12,7 @@ const ConstruirFormulario = ({
   const selectItems = (tabla) => {
     return (
       <div>
-        <h2> { modelo[tabla]} </h2>
+        <h2> { JSON.stringify(modelo[tabla]) } </h2>
         <h3> { JSON.stringify(crearDatos(tabla,modelo[tabla]))} </h3>
       </div>
     );
