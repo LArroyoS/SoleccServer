@@ -1,7 +1,6 @@
-/*
 import React from "react";
 
-import * as peticion from "./ListasPruebas";
+import * as peticion from "../control/generarDatos";
 import modelo from "../modelos/estatico/form";
 
 const ConstruirFormulario = ({
@@ -86,4 +85,3 @@ const ConstruirFormulario = ({
 };
 
 export default ConstruirFormulario;
-*/
