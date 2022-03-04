@@ -8,7 +8,7 @@ export default function PruebaFormulario() {
     alert("cambio");
   }
   const opciones = () => {
-    return modelo.map((value,index) => {
+    return modelo.map((value) => {
       return <opcion value={value}>{value}</opcion>
     });
   }
@@ -17,7 +17,7 @@ export default function PruebaFormulario() {
       <h1>Prueba Formulario</h1>
       <label>Tipo de peticion</label>
       <select name="peticion" onChange={cambio}>
-        <option value="Nula">--Seleccione un tabla--</option>
+        <option value="">--Seleccione un tabla--</option>
         { opciones() }
       </select>
       <h4>tablas: { JSON.stringify(tablas) }</h4>
