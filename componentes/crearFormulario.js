@@ -10,7 +10,7 @@ const ConstruirFormulario = ({
   onChangeValueSelect
 }) => {
   const selectItems = (tabla) => {
-    const obtenerLista = peticion.datos(tabla, modelo.modelo[tabla], 4);
+    const obtenerLista = peticion.datos(tabla, modelo[tabla], 4);
     return obtenerLista.map((item) => {
       return (
         <option value={JSON.stringify(item)}> {item.toString.title} </option>
