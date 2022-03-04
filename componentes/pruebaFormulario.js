@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import tablas from "../modelos/estatico/tabla";
 import modelo from "../modelos/estatico/modelo";
 import form from "../modelos/estatico/form";
+import ConstruirFormulario from "./crearFormulario";
 
 export default function PruebaFormulario() {
   const [tabla,setTabla] = useState("");
