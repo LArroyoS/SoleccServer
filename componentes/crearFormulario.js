@@ -13,7 +13,7 @@ const ConstruirFormulario = ({
     return (
       <div>
         <h2> { tabla } </h2>
-        <h2> { JSON.stringify(modelo[tabla]) } </h2>
+        <h2> { JSON.stringify( modelo[tabla]) } </h2>
         <h3> { JSON.stringify(crearDatos(tabla,modelo[tabla]))} </h3>
       </div>
     );

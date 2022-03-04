@@ -11,7 +11,7 @@ const form = {
 			"titulo":"Usuario",
 			"nombre":"id_usuario",
 			"icon":"puzzle-piece",
-			"tabla": "usuario"
+			"tabla": "usuarios"
 		}
 	],
 	"categorias":[
