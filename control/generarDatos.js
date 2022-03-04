@@ -1,4 +1,4 @@
-const datos = (tabla, modelo, num) => {
+const crearDatos = (tabla, modelo, num) => {
     const datos = [];
     for (var i = 0; i < num; i++) {
         let crear = lleno(modelo, tabla + i);
@@ -18,5 +18,5 @@ const lleno = (modelo, nombre) => {
     return aux;
 };
   
-  export default {lleno, datos};
+  export default crearDatos;
   

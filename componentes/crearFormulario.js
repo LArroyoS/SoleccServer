@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as peticion from "../control/generarDatos";
+import crearDatos from "../control/generarDatos";
 import modelo from "../modelos/estatico/form";
 
 const ConstruirFormulario = ({
@@ -10,12 +10,14 @@ const ConstruirFormulario = ({
   onChangeValueSelect
 }) => {
   const selectItems = (tabla) => {
-    const obtenerLista = peticion.datos(tabla, modelo[tabla], 4);
+    return JSON.stringify(crearDatos(tabla,modelo[tabla]))
+    /*const obtenerLista = peticion.datos(tabla, modelo[tabla], 4);
     return obtenerLista.map((item) => {
       return (
         <option value={JSON.stringify(item)}> {item.toString.title} </option>
       );
     });
+    */
   };
 
   return (
