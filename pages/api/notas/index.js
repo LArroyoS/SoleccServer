@@ -1,4 +1,4 @@
-import dbConexion from "../../utilidades/conexion";
+import dbConexion from "../../../utilidades/conexion";
 import Notas from "../../../modelos/notas";
 
 dbConexion();
