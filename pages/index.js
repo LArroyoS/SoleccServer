@@ -15,10 +15,16 @@ export default function Home() {
     switch(componente){
       case 1:
         return (<PruebaPeticion></PruebaPeticion>); 
+      break;
       case 2:
         return (<PruebaFormulario></PruebaFormulario>);
+      break;
       case 3:
         return (<PruebaMongo></PruebaMongo>);
+      break;
+      default:
+        return (<p>Se reconoce componente {componente} como {typeof(componente)} </p>)
+      break;
     }
   }
   return (
