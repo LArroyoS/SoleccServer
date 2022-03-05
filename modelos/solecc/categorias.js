@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
-const CategoriaSchema = new mongoose.Schema ({
-
+const CategoriaSchema = new mongoose.Schema({
     nom_categoria:{
         type: String,
         required: true,
