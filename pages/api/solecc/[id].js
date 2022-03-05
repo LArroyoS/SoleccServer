@@ -1,4 +1,4 @@
-//import dbConexionSolecc from "../../../utilidades/conexionSolecc";
+import dbConexionSolecc from "../../../utilidades/conexionSolecc";
 //import Notas from "../../../modelos/notas";
 //import modeloAlmacen from "../../../modelos/solecc/almacen";
 //import modeloCategoria from "../../../modelos/solecc/categorias";
