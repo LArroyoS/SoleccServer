@@ -1,6 +1,6 @@
 import dbConexionSolecc from "../../../utilidades/conexionSolecc";
 import Notas from "../../../modelos/notas";
-import modeloAlmacen from "../../../modelos/solecc/almacen";
+import Almacenes from "../../../modelos/solecc/almacen";
 //import modeloCategoria from "../../../modelos/solecc/categorias";
 //import modeloComprobanteEntrada from "../../../modelos/solecc/comprobantes_entradas";
 //import modeloComprobanteVenta from "../../../modelos/solecc/comprobantes_ventas";
