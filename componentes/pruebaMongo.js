@@ -8,6 +8,16 @@ export default function PruebaMongo() {
       <Link href="/api/mongodb">
         <a>Ir a pruebaMongo</a>
       </Link>
+      <Link href="/api/notas">
+        <a>Obtener notas</a>
+      </Link>
+      <form method="POST" action="/api/notas">
+        <labe>titulo</labe>
+        <input type="text" name="titulo"></input>
+        <labe>descripcion</labe>
+        <input type="text" name="descripcion"></input>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   )
 }

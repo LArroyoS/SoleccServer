@@ -1,10 +1,10 @@
-import * as mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const NotasEsquema = new mongoose.Schema({
-    title: {
+    titulo: {
         type: String,
     },
-    description: {
+    descripcion: {
         type: String
     }
 });
