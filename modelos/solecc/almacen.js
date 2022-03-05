@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const AlmacenSchema = new mongoose.Schema ({
+const AlmacenSchema = new mongoose.Schema({
     nom_almacen:{
         type: String,
         required: true,
@@ -26,7 +26,6 @@ const AlmacenSchema = new mongoose.Schema ({
             trim: true
         }
     }
-
 });
 
 const modeloAlmacen = mongoose.model('Almacenes', AlmacenSchema);
