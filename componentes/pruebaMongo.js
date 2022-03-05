@@ -8,6 +8,7 @@ export default function PruebaMongo() {
       <Link href="/api/mongodb">
         <a>Ir a pruebaMongo</a>
       </Link>
+      <br></br>
       <Link href="/api/notas">
         <a>Obtener notas</a>
       </Link>

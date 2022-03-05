@@ -9,5 +9,6 @@ const NotasEsquema = new mongoose.Schema({
     }
 });
 
-module.export = mongoose.models.Notas 
-    || mongoose.model("Notas", NotasEsquema);
+const Notas = mongoose.model("Notas", NotasEsquema);
+
+export default Notas;
