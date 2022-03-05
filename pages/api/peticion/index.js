@@ -1,6 +1,3 @@
-//import dbConexion from "../../utilidades/conexion";
-//dbConexion();
-
 const POST = () => {
     return "POST Solo";
 }
