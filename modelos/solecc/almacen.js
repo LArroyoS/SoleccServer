@@ -28,6 +28,6 @@ const AlmacenSchema = new mongoose.Schema({
     }
 });
 
-const modeloAlmacen = mongoose.model('Almacenes', AlmacenSchema);
+const Almacenes = mongoose.model('Almacenes', AlmacenSchema);
 
-export default modeloAlmacen;
+export default Almacenes;
