@@ -149,8 +149,12 @@ const toString = (tabla,body) => {
 }
 
 export default async (req, res) => {
+    res.status(400).json({ success: true });
+    /*
     const { method, body, query } = req;
     const tabla = query["id"];
+    res.status(400).json({ tabla: tabla });
+    
     const Obj = objeto(tabla);
     const visualizar = toString(tabla,body);
     const cuerpo = {...body, toString: visualizar};
@@ -167,4 +171,5 @@ export default async (req, res) => {
             res.status(400).json({ success: false });
             break;
     }
+    */
 }
