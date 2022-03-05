@@ -1,4 +1,3 @@
-/*
 import mongoose from 'mongoose';
 
 const conexion = {};
@@ -17,4 +16,3 @@ async function dbConexion(){
 }
 
 export default dbConexion;
-*/
