@@ -1,4 +1,4 @@
-import dbConexionSolecc from "../../../utilidades/conexionSolecc";
+//import dbConexionSolecc from "../../../utilidades/conexionSolecc";
 import Notas from "../../../modelos/notas";
 import modeloAlmacen from "../../../modelos/solecc/almacen";
 import modeloCategoria from "../../../modelos/solecc/categorias";
@@ -17,8 +17,8 @@ import modeloTipoUsuario from "../../../modelos/solecc/tipo_usuarios";
 import modeloUsuario from "../../../modelos/solecc/usuarios";
 import modeloVenta from "../../../modelos/solecc/ventas";
 
-dbConexionSolecc();
-
+//dbConexionSolecc();
+/*
 const objeto = (tabla) => {
     switch (tabla) {
         case "almacenes":
@@ -147,6 +147,7 @@ const toString = (tabla,body) => {
     }
     return ver;
 }
+*/
 
 export default async (req, res) => {
     res.status(200).json({ success: true });
