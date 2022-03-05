@@ -12,15 +12,13 @@ export default function Home() {
     setComponente(target.value);
   }
   const vista = () => {
-    
     switch(componente){
       case 1:
         return (<PruebaPeticion></PruebaPeticion>); 
       case 2:
         return (<PruebaFormulario></PruebaFormulario>);
       case 3:
-        return (<PruebaMongo></PruebaMongo>)
-      
+        return (<PruebaMongo></PruebaMongo>);
     }
   }
   return (
@@ -30,6 +28,7 @@ export default function Home() {
         <option value={2}>Formularios</option>
         <option value={3}>PruebaMongoAtlas</option>
       </select>
+      <p> {componente} </p>
       { vista() }
     </div>
   )
