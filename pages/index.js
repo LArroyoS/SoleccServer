@@ -13,13 +13,13 @@ export default function Home() {
   }
   const vista = () => {
     switch(componente){
-      case 1:
+      case 1: case "1":
         return (<PruebaPeticion></PruebaPeticion>); 
       break;
-      case 2:
+      case 2: case "2":
         return (<PruebaFormulario></PruebaFormulario>);
       break;
-      case 3:
+      case 3: case "3":
         return (<PruebaMongo></PruebaMongo>);
       break;
       default:
