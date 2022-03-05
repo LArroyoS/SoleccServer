@@ -11,11 +11,6 @@ const ProveedorSchema = new mongoose.Schema ({
         required: true,
         trim: true
     },
-    dir_proveedor:{
-        type: String,
-        required: true,
-        trim: true
-    },
     tel_proveedor:{
         type: String,
         required: true,

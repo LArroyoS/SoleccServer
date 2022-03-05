@@ -31,11 +31,6 @@ const UsuarioSchema = new mongoose.Schema ({
         required: true,
         trim: true
     },
-    id_direccion:{
-        type: String,
-        required: true,
-        trim: true
-    },
     activo:{
         type: Boolean,
         required: true,

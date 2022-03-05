@@ -44,7 +44,7 @@ export default function PruebaFormulario() {
       </select>
       {tabla !== ""? 
         (
-          <div>
+          <form method="POST" action={"/api/solecc/"+tabla+""}>
             <ConstruirFormulario
               formulario={formulario}
               state={objeto}
@@ -52,8 +52,8 @@ export default function PruebaFormulario() {
               onChangeValueSelect={onChangeValueSelect}
             />
             <br />
-            <button onClick={guardar}> Guardar </button>
-          </div>
+            <button type="submit"> Guardar </button>
+          </form>
         ) : 
         (
           <p>Selecicone una tabla</p>

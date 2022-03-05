@@ -30,10 +30,11 @@ const form = {
 	],
 	"comprobantes_ventas":[
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Venta",
 			"nombre":"id_venta",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "ventas"
 		},
 		{
 			"type":"text",
@@ -50,10 +51,11 @@ const form = {
 	],
 	"comprobantes_entradas":[
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Entrada",
 			"nombre":"id_entrada",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "entradas"
 		},
 		{
 			"type":"text",
@@ -70,10 +72,11 @@ const form = {
 	],
 	"direcciones_usuarios": [
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Usuario",
 			"nombre":"id_usuario",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "usuarios"
 		},
 		{
 			"type":"text",
@@ -102,10 +105,11 @@ const form = {
 	],
 	"direcciones_proveedores": [
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Proveedor",
 			"nombre":"id_proveedor",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "proveedores"
 		},
 		{
 			"type":"text",
@@ -134,22 +138,25 @@ const form = {
 	],
 	"entradas": [
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Proveedor",
 			"nombre":"id_proveedor",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "proveedores"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Producto",
 			"nombre":"id_producto",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "productos"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Usuario",
 			"nombre":"id_usuario",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "usuarios"
 		},
 		{
 			"type":"text",
@@ -176,10 +183,11 @@ const form = {
 			"icon":"puzzle-piece"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Tipo Pago",
 			"nombre":"id_tipo_pago",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "tipo_pagos"
 		},
 		{
 			"type":"text",
@@ -196,16 +204,18 @@ const form = {
 	],
 	"producto_almacenes": [
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Almacen",
 			"nombre":"id_almacen",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "almacenes"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Producto",
 			"nombre":"id_producto",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "productos"
 		},
 		{
 			"type":"text",
@@ -234,16 +244,18 @@ const form = {
 	],
 	"productos": [
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Categoria",
 			"nombre":"id_categoria",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "categorias"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Proveedor",
 			"nombre":"id_proveedor",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "proveedores"
 		},
 		{
 			"type":"text",
@@ -348,10 +360,11 @@ const form = {
 			"icon":"puzzle-piece"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Region",
 			"nombre":"id_region",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "regiones"
 		}
 	],
 	"tipo_pagos": [
@@ -396,30 +409,27 @@ const form = {
 			"icon":"puzzle-piece"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Tipo Usuario",
 			"nombre":"id_tipo_usuario",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "tipo_usuarios"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Sucursal",
 			"nombre":"id_sucursal",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "sucursales"
 		},
-		{
-			"type":"text",
-			"titulo":"Direccion",
-			"nombre":"id_direccion",
-			"icon":"puzzle-piece"
-		}
 	],
 	"ventas": [
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Producto",
 			"nombre":"id_prod_alm",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "producto_almacenes"
 		},
 		{
 			"type":"text",
@@ -452,10 +462,11 @@ const form = {
 			"icon":"puzzle-piece"
 		},
 		{
-			"type":"text",
+			"type":"picker",
 			"titulo":"Tipo Pago",
 			"nombre":"id_tipo_pago",
-			"icon":"puzzle-piece"
+			"icon":"puzzle-piece",
+			"tabla": "tipo_pagos"
 		},
 		{
 			"type":"text",
