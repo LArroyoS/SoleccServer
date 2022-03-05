@@ -3,6 +3,7 @@ import tablas from "../modelos/estatico/tabla";
 import modelo from "../modelos/estatico/modelo";
 import form from "../modelos/estatico/form";
 import ConstruirFormulario from "./crearFormulario";
+import Link from 'next/link'
 
 export default function PruebaFormulario() {
   const [tabla,setTabla] = useState("");
@@ -44,16 +45,23 @@ export default function PruebaFormulario() {
       </select>
       {tabla !== ""? 
         (
-          <form method="POST" action={"/api/solecc/"+tabla+""}>
-            <ConstruirFormulario
-              formulario={formulario}
-              state={objeto}
-              onChangeValue={onChangeValue}
-              onChangeValueSelect={onChangeValueSelect}
-            />
-            <br />
-            <button type="submit"> Guardar </button>
-          </form>
+          <div>
+            <br></br>
+            <Link href={"/api/solecc/"+tabla}>
+              <a>Obtener Lista tabla</a>
+            </Link>
+            <br></br>
+            <form method="POST" action={"/api/solecc/"+tabla+""}>
+              <ConstruirFormulario
+                formulario={formulario}
+                state={objeto}
+                onChangeValue={onChangeValue}
+                onChangeValueSelect={onChangeValueSelect}
+              />
+              <br />
+              <button type="submit"> Guardar </button>
+            </form>
+          </div>
         ) : 
         (
           <p>Selecicone una tabla</p>
