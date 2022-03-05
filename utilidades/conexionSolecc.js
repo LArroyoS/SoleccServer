@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const conexion = {};
 
-async function dbConexion(){
+async function dbConexionSolecc(){
   if (conexion.isConnected) {
     return;
   }
@@ -15,4 +15,4 @@ async function dbConexion(){
   console.log(conexion.isConnected);
 }
 
-export default dbConexion;
+export default dbConexionSolecc;
