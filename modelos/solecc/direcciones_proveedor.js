@@ -30,16 +30,6 @@ const DireccionProveedorSchema = new mongoose.Schema ({
         type: Boolean,
         trim: true,
         required: true
-    },
-    toString: {
-        title: {
-            type: String,
-            trim: true
-        },
-        subtitle: {
-            type: String,
-            trim: true
-        }
     }
 });
 

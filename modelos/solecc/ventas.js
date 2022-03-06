@@ -51,18 +51,7 @@ const VentaSchema = new mongoose.Schema ({
         type: Boolean,
         required: true,
         trim: true
-    },
-    toString: {
-        title: {
-            type: String,
-            required: true,
-        },
-        subtitle: {
-            type: String,
-            required: true,
-        },
     }
-
 });
 
 const modeloVenta = mongoose.model('Ventas', VentaSchema);

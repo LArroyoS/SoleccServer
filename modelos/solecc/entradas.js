@@ -56,18 +56,7 @@ const EntradaSchema = new mongoose.Schema ({
         type: Boolean,
         required: true,
         trim: true
-    },
-    toString: {
-        title: {
-            type: String,
-            required: true,
-        },
-        subtitle: {
-            type: String,
-            required: true,
-        },
     }
-
 });
 
 const modeloEntrada = mongoose.model('Entradas', EntradaSchema);

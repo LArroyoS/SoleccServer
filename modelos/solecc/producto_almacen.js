@@ -30,21 +30,6 @@ const ProductoAlmacenSchema = new mongoose.Schema ({
         type: Double,
         required: true,
         trim: true
-    },
-    activo:{
-        type: String,
-        required: true,
-        trim: true
-    },
-    toString: {
-        title: {
-            type: String,
-            trim: true
-        },
-        subtitle: {
-            type: String,
-            trim: true
-        }
     }
 });
 

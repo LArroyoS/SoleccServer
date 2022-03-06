@@ -15,17 +15,7 @@ const RegionSchema = new mongoose.Schema ({
         type: Boolean,
         required: true,
         trim: true
-    },
-    toString:{
-        title: {
-            type: String,
-            trim: true 
-        },
-        subtitle: {
-            type: String,
-            trim: true 
-        }
-    },
+    }
 });
 
 const modeloRegion = mongoose.model('Regiones', RegionSchema);
