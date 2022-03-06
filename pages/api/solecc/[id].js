@@ -150,6 +150,8 @@ const toString = (tabla,body) => {
 }
 
 export default async (req, res) => {
+    res.status(200).json({ success: true });
+    /*
     const { method, body, query } = req;
     const tabla = query["id"];
     res.status(400).json({ tabla: tabla });
@@ -170,4 +172,5 @@ export default async (req, res) => {
             res.status(400).json({ success: false });
             break;
     }
+    */
 }
