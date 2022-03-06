@@ -3,7 +3,7 @@ import Notas from "../../../modelos/notas";
 import Almacenes from "../../../modelos/solecc/almacen";
 import modeloCategoria from "../../../modelos/solecc/categorias";
 import modeloComprobanteEntrada from "../../../modelos/solecc/comprobantes_entradas";
-//import modeloComprobanteVenta from "../../../modelos/solecc/comprobantes_ventas";
+import modeloComprobanteVenta from "../../../modelos/solecc/comprobantes_ventas";
 //import modeloDireccionProveedor from "../../../modelos/solecc/direcciones_proveedor";
 //import modeloDireccionUsuario from "../../../modelos/solecc/direcciones_usuarios";
 //import modeloEntrada from "../../../modelos/solecc/entradas";
