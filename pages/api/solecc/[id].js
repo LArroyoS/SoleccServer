@@ -22,7 +22,7 @@ dbConexionSolecc();
 const objeto = (tabla) => {
     switch (tabla) {
         case "almacenes":
-            return modeloAlmacen;
+            return Almacenes;
             break;
         case "categorias":
             return modeloCategoria;
