@@ -6,7 +6,7 @@ import modeloComprobanteEntrada from "../../../modelos/solecc/comprobantes_entra
 import modeloComprobanteVenta from "../../../modelos/solecc/comprobantes_ventas";
 import modeloDireccionProveedor from "../../../modelos/solecc/direcciones_proveedor";
 import modeloDireccionUsuario from "../../../modelos/solecc/direcciones_usuarios";
-//import modeloEntrada from "../../../modelos/solecc/entradas";
+import modeloEntrada from "../../../modelos/solecc/entradas";
 //import modeloProductoAlmacen from "../../../modelos/solecc/producto_almacen";
 //import modeloProducto from "../../../modelos/solecc/productos";
 //import modeloProveedor from "../../../modelos/solecc/proveedores";
