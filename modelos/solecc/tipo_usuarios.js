@@ -11,7 +11,11 @@ const TipoUsuarioSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
         trim: true
-    }});
+    },
+    toString:{
+        type: Object
+    }
+});
 
 const modeloTipoUsuario = mongoose.model('Tipo_Usuarios', TipoUsuarioSchema);
 

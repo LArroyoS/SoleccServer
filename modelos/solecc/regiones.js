@@ -15,6 +15,9 @@ const RegionSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
         trim: true
+    },
+    toString:{
+        type: Object
     }
 });
 

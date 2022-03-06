@@ -30,6 +30,9 @@ const DireccionUsuarioSchema = new mongoose.Schema({
         type: Boolean,
         trim: true,
         required: true
+    },
+    toString:{
+        type: Object
     }
 });
 

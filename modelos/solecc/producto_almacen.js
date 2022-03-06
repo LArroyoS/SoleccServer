@@ -30,6 +30,9 @@ const ProductoAlmacenSchema = new mongoose.Schema({
         type: Number,
         required: true,
         trim: true
+    },
+    toString:{
+        type: Object
     }
 });
 
