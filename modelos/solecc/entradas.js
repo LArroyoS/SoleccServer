@@ -22,7 +22,7 @@ const EntradaSchema = new mongoose.Schema({
         trim: true
     },
     cantidad:{
-        type: Int,
+        type: Integer,
         required: true,
         trim: true
     },
@@ -32,7 +32,7 @@ const EntradaSchema = new mongoose.Schema({
         trim: true
     },
     status_pago:{
-        type: Int,
+        type: Integer,
         required: true,
         trim: true
     },
