@@ -152,7 +152,6 @@ const toString = (tabla,body) => {
 export default async (req, res) => {
     const { method, body, query } = req;
     const tabla = query["id"];
-    res.status(400).json({ tabla: tabla });
     
     const Obj = objeto(tabla);
     const visualizar = toString(tabla,body);
