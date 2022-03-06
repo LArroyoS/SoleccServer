@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
 const EntradaSchema = new mongoose.Schema({
-
     id_proveedor:{
         type: String,
         required: true,
