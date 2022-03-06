@@ -17,22 +17,22 @@ const EntradaSchema = new mongoose.Schema({
         trim: true
     },
     precio_compra:{
-        type: Double,
+        type: Number,
         required: true,
         trim: true
     },
     cantidad:{
-        type: Integer,
+        type: Number,
         required: true,
         trim: true
     },
     total:{
-        type: Double,
+        type: Number,
         required: true,
         trim: true
     },
     status_pago:{
-        type: Integer,
+        type: Number,
         required: true,
         trim: true
     },
