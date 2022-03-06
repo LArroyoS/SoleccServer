@@ -152,25 +152,25 @@ const toString = (tabla,body) => {
 export default async (req, res) => {
     const { method, body, query } = req;
     const tabla = query["id"];
-    
     const Obj = objeto(tabla);
-    const visualizar = toString(tabla,body);
-    res.status(200).json({ success: true, data: visualizar });
-    const cuerpo = {...body, toString: visualizar};
-    res.status(200).json({ success: true, data: cuerpo });
-    /*
+
     switch (method) {
         case "GET":
             const find = await Obj.find({});
             res.status(200).json({ success: true, data: find });
             break;
         case "POST":
+            const visualizar = toString(tabla,body);
+            res.status(200).json({ success: true, data: visualizar });
+            /*
+            const cuerpo = {...body, toString: visualizar};
+            res.status(200).json({ success: true, data: cuerpo });
             const create = await Obj.create(cuerpo);
             res.status(200).json({ success: true, data: create });
             break;
+            */
         default:
             res.status(400).json({ success: false });
             break;
     }
-    */
 }
