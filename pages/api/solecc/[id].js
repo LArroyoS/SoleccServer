@@ -18,7 +18,7 @@ import modeloUsuario from "../../../modelos/solecc/usuarios";
 import modeloVenta from "../../../modelos/solecc/ventas";
 
 dbConexionSolecc();
-
+/*
 const objeto = (tabla) => {
     switch (tabla) {
         case "almacenes":
@@ -148,7 +148,7 @@ const toString = (tabla,body) => {
     }
     return ver;
 }
-
+*/
 export default async (req, res) => {
     res.status(200).json({ success: true });
     /*
