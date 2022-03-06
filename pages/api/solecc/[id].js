@@ -156,6 +156,7 @@ export default async (req, res) => {
     const Obj = objeto(tabla);
     const visualizar = toString(tabla,body);
     const cuerpo = {...body, toString: visualizar};
+    res.status(200).json({ success: true, data: cuerpo });
     switch (method) {
         case "GET":
             const find = await Obj.find({});
