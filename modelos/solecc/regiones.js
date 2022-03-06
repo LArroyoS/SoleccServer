@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const RegionSchema = new mongoose.Schema ({
+const RegionSchema = new mongoose.Schema({
     nom_region:{
         type: String,
         required: true,

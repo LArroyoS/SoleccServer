@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const DireccionProveedorSchema = new mongoose.Schema ({
+const DireccionProveedorSchema = new mongoose.Schema({
     id_usuario:{
         type: String,
         required: true,

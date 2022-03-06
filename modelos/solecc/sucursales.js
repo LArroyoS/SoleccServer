@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const SucursalSchema = new mongoose.Schema ({
+const SucursalSchema = new mongoose.Schema({
     nom_sucursal:{
         type: String,
         required: true,

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const ProveedorSchema = new mongoose.Schema ({
+const ProveedorSchema = new mongoose.Schema({
     nom_proveedor:{
         type: String,
         required: true,

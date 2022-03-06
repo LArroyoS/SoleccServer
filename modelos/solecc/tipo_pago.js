@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const PagoSchema = new mongoose.Schema ({
+const PagoSchema = new mongoose.Schema({
 
     nom_tipo:{
         type: String,

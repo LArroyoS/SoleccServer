@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const ComprobanteVentasSchema = new mongoose.Schema ({
+const ComprobanteVentasSchema = new mongoose.Schema({
 
     id_venta:{
         type: String,
