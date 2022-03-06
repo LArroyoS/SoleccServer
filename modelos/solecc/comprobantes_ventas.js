@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
 const ComprobanteVentasSchema = new mongoose.Schema({
-
     id_venta:{
         type: String,
         required: true,
@@ -24,6 +23,6 @@ const ComprobanteVentasSchema = new mongoose.Schema({
     }
 });
 
-const modeloComprobanteVenta = mongoose.model('ComprobantesEntradas', ComprobanteVentasSchema);
+const modeloComprobanteVenta = mongoose.model('ComprobantesVentas', ComprobanteVentasSchema);
 
 export default modeloComprobanteVenta;
