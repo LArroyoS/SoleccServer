@@ -8,14 +8,14 @@ import modeloDireccionProveedor from "../../../modelos/solecc/direcciones_provee
 import modeloDireccionUsuario from "../../../modelos/solecc/direcciones_usuarios";
 import modeloEntrada from "../../../modelos/solecc/entradas";
 import modeloProductoAlmacen from "../../../modelos/solecc/producto_almacen";
-//import modeloProducto from "../../../modelos/solecc/productos";
-//import modeloProveedor from "../../../modelos/solecc/proveedores";
-//import modeloRegion from "../../../modelos/solecc/regiones";
-//import modeloSucursal from "../../../modelos/solecc/sucursales";
-//import modeloPago from "../../../modelos/solecc/tipo_pago";
-//import modeloTipoUsuario from "../../../modelos/solecc/tipo_usuarios";
-//import modeloUsuario from "../../../modelos/solecc/usuarios";
-//import modeloVenta from "../../../modelos/solecc/ventas";
+import modeloProducto from "../../../modelos/solecc/productos";
+import modeloProveedor from "../../../modelos/solecc/proveedores";
+import modeloRegion from "../../../modelos/solecc/regiones";
+import modeloSucursal from "../../../modelos/solecc/sucursales";
+import modeloPago from "../../../modelos/solecc/tipo_pago";
+import modeloTipoUsuario from "../../../modelos/solecc/tipo_usuarios";
+import modeloUsuario from "../../../modelos/solecc/usuarios";
+import modeloVenta from "../../../modelos/solecc/ventas";
 
 dbConexionSolecc();
 /*

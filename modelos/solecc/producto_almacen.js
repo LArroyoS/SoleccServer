@@ -22,12 +22,12 @@ const ProductoAlmacenSchema = new mongoose.Schema({
         trim: true
     },
     precio_compra: {
-        type: Double,
+        type: Number,
         required: true,
         trim: true
     },
     precio_venta: {
-        type: Double,
+        type: Number,
         required: true,
         trim: true
     }
