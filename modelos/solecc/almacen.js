@@ -16,16 +16,6 @@ const AlmacenSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    toString: {
-        title: {
-            type: String,
-            trim: true
-        },
-        subtitle: {
-            type: String,
-            trim: true
-        }
-    }
 });
 
 const Almacenes = mongoose.model('Almacenes', AlmacenSchema);
