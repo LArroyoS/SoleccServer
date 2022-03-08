@@ -26,6 +26,6 @@ const ComprobanteVentasSchema = new mongoose.Schema({
     }
 });
 
-const modeloComprobanteVenta = mongoose.model('ComprobantesVentas', ComprobanteVentasSchema);
+const modeloComprobanteVenta = mongoose.models.ComprobantesVentas || mongoose.model('ComprobantesVentas', ComprobanteVentasSchema);
 
 export default modeloComprobanteVenta;

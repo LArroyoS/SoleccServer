@@ -61,6 +61,6 @@ const EntradaSchema = new mongoose.Schema({
     }
 });
 
-const modeloEntrada = mongoose.model('Entradas', EntradaSchema);
+const modeloEntrada = mongoose.models.Entradas || mongoose.model('Entradas', EntradaSchema);
 
 export default modeloEntrada;

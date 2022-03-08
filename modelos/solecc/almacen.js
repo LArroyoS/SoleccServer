@@ -21,6 +21,6 @@ const AlmacenSchema = new mongoose.Schema({
     }
 });
 
-const Almacenes = mongoose.model('Almacenes', AlmacenSchema);
+const Almacenes = mongoose.models.Almacenes || mongoose.model('Almacenes', AlmacenSchema);
 
 export default Almacenes;

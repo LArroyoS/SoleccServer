@@ -31,6 +31,6 @@ const ProveedorSchema = new mongoose.Schema({
     }
 });
 
-const modeloProveedor = mongoose.model('Proveedores', ProveedorSchema);
+const modeloProveedor = mongoose.models.Proveedores || mongoose.model('Proveedores', ProveedorSchema);
 
 export default modeloProveedor;

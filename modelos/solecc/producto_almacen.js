@@ -36,6 +36,6 @@ const ProductoAlmacenSchema = new mongoose.Schema({
     }
 });
 
-const modeloProductoAlmacen = mongoose.model('ProductoAlmacenes', ProductoAlmacenSchema);
+const modeloProductoAlmacen = mongoose.models.ProductoAlmacenes || mongoose.model('ProductoAlmacenes', ProductoAlmacenSchema);
 
 export default modeloProductoAlmacen;

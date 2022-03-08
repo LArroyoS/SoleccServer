@@ -18,6 +18,6 @@ const PagoSchema = new mongoose.Schema({
     }
 });
 
-const modeloPago = mongoose.model('Tipo_Pagos', PagoSchema);
+const modeloPago = mongoose.models.Tipo_Pagos || mongoose.model('Tipo_Pagos', PagoSchema);
 
 export default modeloPago;

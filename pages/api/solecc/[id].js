@@ -70,7 +70,7 @@ const objeto = (tabla) => {
             return modeloVenta;
             break;
         default:
-            return Notas;
+            return "Notas";
             break;
     }
 }
@@ -145,6 +145,9 @@ const toString = (tabla,body) => {
             ver.title = body.id_prod_alm;
             ver.subtitle = body.id_prod_alm;
             break;
+        default:
+            ver = null;
+            break;
     }
     return ver;
 }
@@ -161,16 +164,14 @@ export default async (req, res) => {
             break;
         case "POST":
             const visualizar = toString(tabla,body);
-            res.status(200).json({ success: true, data: visualizar });
-            /*
-            const cuerpo = {...body, toString: visualizar};
-            res.status(200).json({ success: true, data: cuerpo });
+            const cuerpo = {...body, activo: true, toString: visualizar};
             const create = await Obj.create(cuerpo);
             res.status(200).json({ success: true, data: create });
             break;
-            */
+            
         default:
             res.status(400).json({ success: false });
             break;
     }
+
 }

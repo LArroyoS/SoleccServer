@@ -9,6 +9,6 @@ const NotasEsquema = new mongoose.Schema({
     }
 });
 
-const Notas = mongoose.model("Notas", NotasEsquema);
+const Notas = mongoose.models.Notas || mongoose.model("Notas", NotasEsquema);
 
 export default Notas;

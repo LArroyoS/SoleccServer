@@ -31,6 +31,6 @@ const SucursalSchema = new mongoose.Schema({
     }
 });
 
-const modeloSucursal = mongoose.model('Sucursales', SucursalSchema);
+const modeloSucursal = mongoose.models.Sucursales || mongoose.model('Sucursales', SucursalSchema);
 
 export default modeloSucursal;

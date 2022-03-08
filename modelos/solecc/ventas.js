@@ -56,6 +56,6 @@ const VentaSchema = new mongoose.Schema({
     }
 });
 
-const modeloVenta = mongoose.model('Ventas', VentaSchema);
+const modeloVenta = mongoose.models.Ventas || mongoose.model('Ventas', VentaSchema);
 
 export default modeloVenta;

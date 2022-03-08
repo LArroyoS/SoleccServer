@@ -36,6 +36,6 @@ const DireccionUsuarioSchema = new mongoose.Schema({
     }
 });
 
-const modeloDireccionUsuario = mongoose.model('DireccionesUsuarios', DireccionUsuarioSchema);
+const modeloDireccionUsuario = mongoose.models.DireccionesUsuarios ||  mongoose.model('DireccionesUsuarios', DireccionUsuarioSchema);
 
 export default modeloDireccionUsuario;

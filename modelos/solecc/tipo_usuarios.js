@@ -17,6 +17,6 @@ const TipoUsuarioSchema = new mongoose.Schema({
     }
 });
 
-const modeloTipoUsuario = mongoose.model('Tipo_Usuarios', TipoUsuarioSchema);
+const modeloTipoUsuario = mongoose.models.Tipo_Usuarios || mongoose.model('Tipo_Usuarios', TipoUsuarioSchema);
 
 export default modeloTipoUsuario;

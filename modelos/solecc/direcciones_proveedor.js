@@ -36,6 +36,6 @@ const DireccionProveedorSchema = new mongoose.Schema({
     }
 });
 
-const modeloDireccionProveedor = mongoose.model('DireccionesProveedores', DireccionProveedorSchema);
+const modeloDireccionProveedor = mongoose.models.DireccionesProveedores || mongoose.model('DireccionesProveedores', DireccionProveedorSchema);
 
 export default modeloDireccionProveedor;

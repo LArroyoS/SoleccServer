@@ -42,6 +42,7 @@ const ConstruirFormulario = ({
             <div>
               <p> {item.titulo} </p>
               <textarea
+                name={item.nombre}
                 onChange={(change) =>
                   onChangeValue(item.nombre, change.target.value)
                 }
@@ -56,6 +57,7 @@ const ConstruirFormulario = ({
             <div>
               <p> {item.titulo} </p>
               <input
+                name={item.nombre}
                 type="file"
                 onChange={(file) =>
                   onChangeValue(item.nombre, file.target.files[0])
@@ -69,6 +71,7 @@ const ConstruirFormulario = ({
             <div>
               <p> {item.titulo} </p>
               <select
+                name={item.nombre}
                 onChange={(change) =>
                   onChangeValueSelect(item.nombre, change.target.value)
                 }

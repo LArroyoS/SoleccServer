@@ -27,6 +27,6 @@ const ComprobanteEntradaSchema = new mongoose.Schema ({
     }
 });
 
-const modeloComprobanteEntrada = mongoose.model('ComprobantesEntradas', ComprobanteEntradaSchema);
+const modeloComprobanteEntrada = mongoose.models.ComprobantesEntradas || mongoose.model('ComprobantesEntradas', ComprobanteEntradaSchema);
 
 export default modeloComprobanteEntrada;
