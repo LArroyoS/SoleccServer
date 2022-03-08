@@ -1,25 +1,22 @@
-import dbConexionSolecc from "../../../utilidades/conexionSolecc";
-import Notas from "../../../modelos/notas";
-import Almacenes from "../../../modelos/solecc/almacen";
-import modeloCategoria from "../../../modelos/solecc/categorias";
-import modeloComprobanteEntrada from "../../../modelos/solecc/comprobantes_entradas";
-import modeloComprobanteVenta from "../../../modelos/solecc/comprobantes_ventas";
-import modeloDireccionProveedor from "../../../modelos/solecc/direcciones_proveedor";
-import modeloDireccionUsuario from "../../../modelos/solecc/direcciones_usuarios";
-import modeloEntrada from "../../../modelos/solecc/entradas";
-import modeloProductoAlmacen from "../../../modelos/solecc/producto_almacen";
-import modeloProducto from "../../../modelos/solecc/productos";
-import modeloProveedor from "../../../modelos/solecc/proveedores";
-import modeloRegion from "../../../modelos/solecc/regiones";
-import modeloSucursal from "../../../modelos/solecc/sucursales";
-import modeloPago from "../../../modelos/solecc/tipo_pago";
-import modeloTipoUsuario from "../../../modelos/solecc/tipo_usuarios";
-import modeloUsuario from "../../../modelos/solecc/usuarios";
-import modeloVenta from "../../../modelos/solecc/ventas";
+import Notas from "./notas";
+import Almacenes from "./solecc/almacen";
+import modeloCategoria from "./solecc/categorias";
+import modeloComprobanteEntrada from "./solecc/comprobantes_entradas";
+import modeloComprobanteVenta from "./solecc/comprobantes_ventas";
+import modeloDireccionProveedor from "./solecc/direcciones_proveedor";
+import modeloDireccionUsuario from "./solecc/direcciones_usuarios";
+import modeloEntrada from "./solecc/entradas";
+import modeloProductoAlmacen from "./solecc/producto_almacen";
+import modeloProducto from "./solecc/productos";
+import modeloProveedor from "./solecc/proveedores";
+import modeloRegion from "./solecc/regiones";
+import modeloSucursal from "./solecc/sucursales";
+import modeloPago from "./solecc/tipo_pago";
+import modeloTipoUsuario from "./solecc/tipo_usuarios";
+import modeloUsuario from "./solecc/usuarios";
+import modeloVenta from "./solecc/ventas";
 
-dbConexionSolecc();
-
-const objeto = (tabla) => {
+const Objeto = function(tabla){
     switch (tabla) {
         case "almacenes":
             return Almacenes;
@@ -70,12 +67,12 @@ const objeto = (tabla) => {
             return modeloVenta;
             break;
         default:
-            return "Notas";
+            return Notas;
             break;
     }
 }
 
-const toString = (tabla,body) => {
+const ToString = function(tabla,body){
     var ver = {
         title: "",
         subtitle: ""
@@ -152,28 +149,9 @@ const toString = (tabla,body) => {
     return ver;
 }
 
-export default async (req, res) => {
-    const { method, body, query } = req;
-    const tabla = query["id"];
-    const Obj = objeto(tabla);
-
-    switch (method) {
-        case "GET":
-            const find = await Obj.find({});
-            res.status(200).json({ success: true, data: find });
-            break;
-        case "POST":
-            const visualizar = toString(tabla,body);
-            const cuerpo = (visualizar!=null)? 
-                {...body, activo: true, toString: visualizar} :
-                body;
-            const create = await Obj.create(cuerpo);
-            res.status(200).json({ success: true, data: create });
-            break;
-            
-        default:
-            res.status(400).json({ success: false });
-            break;
-    }
-
+const ObtenerModelo = {
+    Objeto: () => Objeto(),
+    ToString: () => ToString()
 }
+
+export default ObtenerModelo;

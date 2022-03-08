@@ -1,0 +1,72 @@
+import React, {useState, useEffect} from "react";
+import tablas from "../modelos/estatico/tabla";
+import modelo from "../modelos/estatico/modelo";
+import form from "../modelos/estatico/form";
+import ConstruirFormulario from "./crearFormulario";
+import Link from 'next/link'
+
+export default function CrearObjetoMongo() {
+  const [tabla,setTabla] = useState("");
+  const [formulario, setFormulario] = useState([]);
+  const [objeto, setObjeto] = useState({});
+
+  useEffect(() => {
+    setFormulario(form[tabla]);
+    setObjeto(modelo[tabla]);
+  }, [tabla]);
+
+  const cambio = ({ target }) => {
+    setTabla(target.value);
+  }
+  const guardar = () => {
+    alert("se guardo");
+  }
+  const opciones = () => {
+    return tablas.map((value) => {
+      return <option value={value}>{value}</option>
+    });
+  }
+
+  const onChangeValue = (nombre, value) => {
+    setObjeto({ ...objeto, [nombre]: value });
+  };
+
+  const onChangeValueSelect = (nombre, value) => {
+    setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
+  };
+
+  return (
+    <div>
+      <h1>Prueba Formulario</h1>
+      <label>Tipo de peticion</label>
+      <select name="peticion" onChange={cambio}>
+        <option value="">--Seleccione un tabla--</option>
+        { opciones() }
+      </select>
+      {tabla !== ""? 
+        (
+          <div>
+            <br></br>
+            <Link href={"/api/solecc/"+tabla}>
+              <a>Obtener Lista tabla</a>
+            </Link>
+            <br></br>
+            <form method="POST" action={"/api/solecc/"+tabla+""}>
+              <ConstruirFormulario
+                formulario={formulario}
+                state={objeto}
+                onChangeValue={onChangeValue}
+                onChangeValueSelect={onChangeValueSelect}
+              />
+              <br />
+              <button type="submit"> Guardar </button>
+            </form>
+          </div>
+        ) : 
+        (
+          <p>Selecicone una tabla</p>
+        )
+      }
+    </div>
+  )
+}
