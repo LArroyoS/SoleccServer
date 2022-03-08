@@ -164,7 +164,9 @@ export default async (req, res) => {
             break;
         case "POST":
             const visualizar = toString(tabla,body);
-            const cuerpo = {...body, activo: true, toString: visualizar};
+            const cuerpo = (visualizar!=null)? 
+                {...body, activo: true, toString: visualizar} :
+                body;
             const create = await Obj.create(cuerpo);
             res.status(200).json({ success: true, data: create });
             break;
