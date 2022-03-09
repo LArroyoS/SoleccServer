@@ -35,7 +35,7 @@ export default function ModificarObjetoMongo() {
 
   return (
     <div>
-      <h1>Prueba Formulario</h1>
+      <h1>Modificar Objeto</h1>
       <label>Tipo de peticion</label>
       <select name="peticion" onChange={cambio}>
         <option value="">--Seleccione un tabla--</option>

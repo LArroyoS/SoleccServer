@@ -18,7 +18,7 @@ export default function EliminarObjetoMongo() {
 
   return (
     <div>
-      <h1>Prueba Formulario</h1>
+      <h1>Eliminar Objeto</h1>
       <label>Tipo de peticion</label>
       <select name="peticion" onChange={cambio}>
         <option value="">--Seleccione un tabla--</option>
