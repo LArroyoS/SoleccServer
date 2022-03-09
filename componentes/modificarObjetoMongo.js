@@ -52,7 +52,7 @@ export default function ModificarObjetoMongo() {
             <p>id: </p>
             <input name="id" value={id} onChange={({target}) => setId(target.value)}></input>
             <br></br>
-            <form method="PUT" action={"/api/solecc/"+tabla+"/"+id}>
+            <form method="POST" action={"/api/solecc/"+tabla+"/"+id}>
               <ConstruirFormulario
                 formulario={formulario}
                 state={objeto}
