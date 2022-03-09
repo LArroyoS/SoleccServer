@@ -150,8 +150,8 @@ const ToString = function(tabla,body){
 }
 
 const ObtenerModelo = {
-    Objeto: () => Objeto(),
-    ToString: () => ToString()
+    Objeto: Objeto,
+    ToString: ToString
 }
 
 export default ObtenerModelo;

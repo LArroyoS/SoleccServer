@@ -6,7 +6,6 @@ dbConexionSolecc();
 export default async (req, res) => {
     const { method, body, query } = req;
     const tabla = query["tabla"];
-    res.status(200).json({ success: true, data: tabla });
     const Obj = ObtenerModelo.Objeto(tabla);
 
     switch (method) {
