@@ -12,7 +12,7 @@ export default async(req, res) => {
     switch (method) {
         case "GET":
             const find = await Obj.findById(id);
-            res.status(200).json({ success: true, data: find });
+            res.status(200).json({ success: true, data: find, method: method });
             break;
         case "POST": case "PUT":
             const visualizar = ObtenerModelo.ToString(tabla,body);
@@ -20,11 +20,11 @@ export default async(req, res) => {
                 {...body, activo: true, toString: visualizar} :
                 body;
             const modificar = await Obj.findByIdAndUpdate(id, cuerpo);
-            res.status(200).json({ success: true, data: modificar });
+            res.status(200).json({ success: true, data: modificar,  method: method });
             break;
         case "DELETE":
             const eliminar = await Obj.findByIdAndRemove(id);
-            res.status(200).json({ success: true, data: eliminar, method: "DELETE"});
+            res.status(200).json({ success: true, data: eliminar, method: method});
             break;
         default:
             res.status(400).json({ success: false });
