@@ -24,7 +24,7 @@ export default async(req, res) => {
             break;
         case "DELETE":
             const eliminar = await Obj.findByIdAndRemove(id);
-            res.status(200).json({ success: true, data: eliminar });
+            res.status(200).json({ success: true, data: eliminar, method: "DELETE"});
             break;
         default:
             res.status(400).json({ success: false });
