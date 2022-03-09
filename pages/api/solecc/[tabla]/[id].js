@@ -1,5 +1,5 @@
 import dbConexionSolecc from "../../../../utilidades/conexionSolecc";
-import { Objeto, ToString } from "../../../../modelos/obtenerModelo";
+import ObtenerModelo from "../../../../modelos/obtenerModelo";
 
 dbConexionSolecc();
 
@@ -7,7 +7,7 @@ export default async(req, res) => {
     const { method, body, query } = req;
     const tabla = query["tabla"];
     const id = query["id"];
-    const Obj = Objeto(tabla);
+    const Obj = ObtenerModelo.Objeto(tabla);
 
     switch (method) {
         case "GET":
@@ -15,7 +15,7 @@ export default async(req, res) => {
             res.status(200).json({ success: true, data: find });
             break;
         case "POST": case "PUT":
-            const visualizar = ToString(tabla,body);
+            const visualizar = ObtenerModelo.ToString(tabla,body);
             const cuerpo = (visualizar!=null)? 
                 {...body, activo: true, toString: visualizar} :
                 body;
