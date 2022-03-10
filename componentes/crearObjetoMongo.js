@@ -9,6 +9,7 @@ export default function CrearObjetoMongo() {
   const [tabla,setTabla] = useState("");
   const [formulario, setFormulario] = useState([]);
   const [objeto, setObjeto] = useState({});
+  const [respuesta, setRespuesta] = useState("");
 
   useEffect(() => {
     setFormulario(form[tabla]);
@@ -26,14 +27,27 @@ export default function CrearObjetoMongo() {
       return <option value={value}>{value}</option>
     });
   }
-
   const onChangeValue = (nombre, value) => {
     setObjeto({ ...objeto, [nombre]: value });
   };
-
   const onChangeValueSelect = (nombre, value) => {
     setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
   };
+  const click = async () => {
+    var data = "";
+    res = await fetch("/api/solecc/"+tabla,
+      { 
+        method: "POST",
+        body: JSON.stringify(objeto),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    data = await res.json();
+    // Pass data to the page via props
+    setRespuesta(data);
+  }
 
   return (
     <div>
@@ -51,7 +65,7 @@ export default function CrearObjetoMongo() {
               <a>Obtener Lista tabla</a>
             </Link>
             <br></br>
-            <form method="POST" action={"/api/solecc/"+tabla+""}>
+            <div>
               <ConstruirFormulario
                 formulario={formulario}
                 state={objeto}
@@ -59,14 +73,17 @@ export default function CrearObjetoMongo() {
                 onChangeValueSelect={onChangeValueSelect}
               />
               <br />
-              <button type="submit"> Guardar </button>
-            </form>
+              <button type="button"> Guardar </button>
+            </div>
           </div>
         ) : 
         (
           <p>Selecicone una tabla</p>
         )
       }
+      <div>
+        <h2>Respuesta { JSON.stringify(respuesta) }</h2>
+      </div>
     </div>
   )
 }

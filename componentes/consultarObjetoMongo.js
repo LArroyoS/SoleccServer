@@ -6,6 +6,7 @@ import Link from 'next/link'
 export default function ConsultarObjetoMongo() {
   const [tabla,setTabla] = useState("");
   const [id,setId] = useState("");
+  const [respuesta, setRespuesta] = useState("");
 
   const cambio = ({ target }) => {
     setTabla(target.value);
@@ -14,6 +15,25 @@ export default function ConsultarObjetoMongo() {
     return tablas.map((value) => {
       return <option value={value}>{value}</option>
     });
+  }
+  const click = async () => {
+    var data = "";
+    if(id==""){
+      data = "ID Vacio"
+    }
+    else{
+      res = await fetch("/api/solecc/"+tabla+"/"+id,
+        { 
+          method: "GET",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      data = await res.json();
+    }
+    // Pass data to the page via props
+    setRespuesta(data);
   }
 
   return (
@@ -35,15 +55,18 @@ export default function ConsultarObjetoMongo() {
             <p>id: </p>
             <input name="id" value={id} onChange={({target}) => setId(target.value)}></input>
             <br></br>
-            <form method="GET" action={"/api/solecc/"+tabla+"/"+id}>
-              <button type="submit"> Consultar </button>
-            </form>
+            <div>
+              <button type="button"> Consultar </button>
+            </div>
           </div>
         ) : 
         (
           <p>Selecicone una tabla</p>
         )
       }
+      <div>
+        <h2>Respuesta { JSON.stringify(respuesta) }</h2>
+      </div>
     </div>
   )
 }

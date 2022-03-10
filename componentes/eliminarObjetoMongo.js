@@ -55,7 +55,7 @@ export default function EliminarObjetoMongo() {
             <p>id: </p>
             <input name="id" value={id} onChange={({target}) => setId(target.value)}></input>
             <br></br>
-            <button type="submit" onClick={click}> Eliminar </button>
+            <button type="button" onClick={click}> Eliminar </button>
           </div>
         ) : 
         (
