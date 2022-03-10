@@ -63,6 +63,8 @@ export default function CrearObjetoMongo() {
               <a>Obtener Lista tabla</a>
             </Link>
             <br></br>
+            <p>{ JSON.stringify(objeto) }</p>
+            <br></br>
             <div>
               <ConstruirFormulario
                 formulario={formulario}

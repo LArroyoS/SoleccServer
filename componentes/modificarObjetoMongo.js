@@ -68,6 +68,8 @@ export default function ModificarObjetoMongo() {
               <a>Obtener Lista tabla</a>
             </Link>
             <br></br>
+            <p>{ JSON.stringify(objeto) }</p>
+            <br></br>
             <p>id: </p>
             <input name="id" value={id} onChange={({target}) => setId(target.value)}></input>
             <br></br>
