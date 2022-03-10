@@ -34,8 +34,7 @@ export default function CrearObjetoMongo() {
     setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
   };
   const click = async () => {
-    var data = "";
-    res = await fetch("/api/solecc/"+tabla,
+    const res = await fetch("/api/solecc/"+tabla,
       { 
         method: "POST",
         body: JSON.stringify(objeto),
@@ -44,8 +43,7 @@ export default function CrearObjetoMongo() {
         },
       }
     );
-    data = await res.json();
-    // Pass data to the page via props
+    const data = await res.json();
     setRespuesta(data);
   }
 

@@ -34,12 +34,11 @@ export default function ModificarObjetoMongo() {
     setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
   };
   const click = async () => {
-    var data = "";
     if(id==""){
-      data = "ID Vacio"
+      setRespuesta("ID Vacio")
     }
     else{
-      res = await fetch("/api/solecc/"+tabla+"/"+id,
+      const res = await fetch("/api/solecc/"+tabla+"/"+id,
         { 
           method: "PUT",
           body: JSON.stringify(objeto),
@@ -48,10 +47,9 @@ export default function ModificarObjetoMongo() {
           },
         }
       );
-      data = await res.json();
+      const data = await res.json();
+      setRespuesta(data);
     }
-    // Pass data to the page via props
-    setRespuesta(data);
   }
 
   return (
