@@ -71,7 +71,7 @@ export default function CrearObjetoMongo() {
                 onChangeValueSelect={onChangeValueSelect}
               />
               <br />
-              <button type="button"> Guardar </button>
+              <button type="button" onClick={click}> Guardar </button>
             </div>
           </div>
         ) : 

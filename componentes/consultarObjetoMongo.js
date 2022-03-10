@@ -54,7 +54,7 @@ export default function ConsultarObjetoMongo() {
             <input name="id" value={id} onChange={({target}) => setId(target.value)}></input>
             <br></br>
             <div>
-              <button type="button"> Consultar </button>
+              <button type="button" onClick={click}> Consultar </button>
             </div>
           </div>
         ) : 
