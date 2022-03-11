@@ -2,40 +2,20 @@ const modelo = {
     almacenes: {
       nom_almacen: "",
       id_usuario: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     categorias: {
       nom_categoria: "",
       des_categoria: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     comprobantes_ventas: {
       id_venta: "",
       img_comprobante: "",
       tipo_comprobante: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     comprobantes_entradas: {
       id_entrada: "",
       img_comprobante: "",
       tipo_comprobante: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     direcciones_usuarios: {
       id_usuario: "",
@@ -43,11 +23,6 @@ const modelo = {
       estado: "",
       domicilio: "",
       referencia: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     direcciones_proveedores: {
       id_usuario: "",
@@ -55,11 +30,6 @@ const modelo = {
       estado: "",
       domicilio: "",
       referencia: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     entradas: {
       id_proveedor: "",
@@ -72,11 +42,6 @@ const modelo = {
       id_tipo_pago: "",
       fecha_compra: "",
       fecha_pago: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     producto_almacenes: {
       id_almacen: "",
@@ -85,11 +50,6 @@ const modelo = {
       precio_venta: "",
       stok_deseado: "",
       stock_real: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     productos: {
       id_categoria: "",
@@ -100,11 +60,6 @@ const modelo = {
       prec_compra: "",
       detalle: "",
       qr_producto: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     proveedores: {
       nom_proveedor: "",
@@ -112,47 +67,22 @@ const modelo = {
       dir_proveedor: "",
       tel_proveedor: "",
       email_proveedor: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     regiones: {
       nom_region: "",
       desc_region: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     sucursales: {
       nom_sucursal: "",
       estado: "",
       municipio: "",
       id_region: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     tipo_pagos: {
       nom_tipo: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     tipo_usuarios: {
       nom_tipo: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     usuarios: {
       nom_usuario: "",
@@ -162,11 +92,6 @@ const modelo = {
       id_tipo_usuario: "",
       id_sucursal: "",
       id_direccion: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     },
     ventas: {
       id_prod_alm: "",
@@ -178,11 +103,6 @@ const modelo = {
       id_tipo_pago: "",
       fecha_compra: "",
       fecha_pago: "",
-      activo: "",
-      toString: {
-        title: "",
-        subtitle: ""
-      }
     }
   };
   
