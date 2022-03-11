@@ -34,10 +34,10 @@ export default function CrearObjetoMongo() {
     setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
   };
   const click = async () => {
-    const res = await fetch("/api/solecc/"+tabla,
+    const res = await fetch("/api/solecc/"+tabla+"",
       { 
         method: "POST",
-        body: JSON.stringify(objeto),
+        body: objeto,
         headers: {
           'Content-Type': 'application/json',
         },
@@ -65,7 +65,7 @@ export default function CrearObjetoMongo() {
             <br></br>
             <p>{ JSON.stringify(objeto) }</p>
             <br></br>
-            <form method="POST" action={"/api/solecc/"+tabla+""}>
+            <div>
               <ConstruirFormulario
                 formulario={formulario}
                 state={objeto}
@@ -73,8 +73,8 @@ export default function CrearObjetoMongo() {
                 onChangeValueSelect={onChangeValueSelect}
               />
               <br />
-              <button type="submit"> Guardar </button>
-            </form>
+              <button type="button" onClick={click}> Guardar </button>
+            </div>
           </div>
         ) : 
         (
