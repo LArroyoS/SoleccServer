@@ -19,8 +19,6 @@ export default async (req, res) => {
     //------------------------------------------------------------------------------------
     //POST/PUT
         case "POST": case "PUT":
-            res.status(200).json({ body: body } )
-            /*
             const visualizar = ObtenerModelo.ToString(tabla,body);
             const cuerpo = (visualizar!=null)? 
                 {...body, activo: true, toString: visualizar} :
@@ -28,7 +26,6 @@ export default async (req, res) => {
             const create = await Obj.create(cuerpo)
                 .then((obj) => {  res.status(200).json({ status: "Se Guardo Correctamente"} )})
                 .catch((error) => {  res.status(200).json({ status: error} )});
-            */
             break;
     //------------------------------------------------------------------------------------
     //Metodo desonocido

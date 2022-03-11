@@ -65,7 +65,7 @@ export default function CrearObjetoMongo() {
             <br></br>
             <p>{ JSON.stringify(objeto) }</p>
             <br></br>
-            <form method="POST" action={"/api/solecc/"+tabla+""}>
+            <div>
               <ConstruirFormulario
                 formulario={formulario}
                 state={objeto}
@@ -74,7 +74,7 @@ export default function CrearObjetoMongo() {
               />
               <br />
               <button type="submit"> Guardar </button>
-            </form>
+            </div>
           </div>
         ) : 
         (
