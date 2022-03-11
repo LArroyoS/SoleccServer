@@ -29,7 +29,7 @@ export default async(req, res) => {
                 } :
                 body;
             const modificar = await Obj.findByIdAndUpdate(id, cuerpo)
-                .then((obj) => { res.status(200).json({ status: cuerpo.toString } )})
+                .then((obj) => { res.status(200).json({ status: "Se actualizo correctamente" } )})
                 .catch((error) => { res.status(200).json({ status: error} )});;
             break;
     //------------------------------------------------------------------------------------
