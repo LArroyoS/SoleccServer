@@ -19,7 +19,7 @@ export default async (req, res) => {
     //------------------------------------------------------------------------------------
     //POST/PUT
         case "POST": case "PUT":
-            res.status(200).json({ body: typeof(body) } )
+            res.status(200).json({ body: body } )
             /*
             const visualizar = ObtenerModelo.ToString(tabla,body);
             const cuerpo = (visualizar!=null)? 
