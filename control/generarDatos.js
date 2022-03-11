@@ -11,10 +11,6 @@ const lleno = (modelo, nombre) => {
     for (let x in aux) {
         aux[x] = x;
     }
-    aux["toString"] = {
-        title: "title " + nombre,
-        subtitle: "subtitle " + nombre
-    };
     return aux;
 };
   
