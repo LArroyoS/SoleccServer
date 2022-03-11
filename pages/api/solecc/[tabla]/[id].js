@@ -23,12 +23,15 @@ export default async(req, res) => {
     //POST/PUT
         case "POST": case "PUT":
             const visualizar = ObtenerModelo.ToString(tabla,body);
+            res.status(200).json({ status: visualizar } )
+            /*
             const cuerpo = (visualizar!=null)? 
                 {...body, activo: true, toString: visualizar} :
                 body;
             const modificar = await Obj.findByIdAndUpdate(id, cuerpo)
                 .then((obj) => { res.status(200).json({ status: "Se Guardo Correctamente"} )})
                 .catch((error) => { res.status(200).json({ status: error} )});;
+            */
             break;
     //------------------------------------------------------------------------------------
     //DELETE
