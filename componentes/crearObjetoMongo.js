@@ -35,12 +35,12 @@ export default function CrearObjetoMongo() {
   };
   const click = async () => {
     const res = await fetch("/api/solecc/"+tabla+"",
-      { 
-        method: "POST",
-        body: objeto,
+      {
         headers: {
           'Content-Type': 'application/json',
         },
+        method: "POST",
+        body: JSON.stringify(objeto),
       }
     );
     const data = await res.json();
