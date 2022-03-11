@@ -26,7 +26,6 @@ export default async(req, res) => {
             const cuerpo = (visualizar!=null)? 
                 {...body, activo: true, toString: visualizar} :
                 body;
-            res.status(200).json({ status: cuerpo } )
             const modificar = await Obj.findByIdAndUpdate(id, cuerpo)
                 .then((obj) => { res.status(200).json({ status: "Se Guardo Correctamente"} )})
                 .catch((error) => { res.status(200).json({ status: error} )});;
