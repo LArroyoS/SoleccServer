@@ -24,7 +24,7 @@ export default async(req, res) => {
         case "POST": case "PUT":
             const visualizar = ObtenerModelo.ToString(tabla,body);
             const cuerpo = (visualizar!=null)? 
-                {...body, activo: true, toString: visualizar} :
+                {...body, activo: false, toString: visualizar} :
                 body;
             const modificar = await Obj.findByIdAndUpdate(id, cuerpo)
                 .then((obj) => { res.status(200).json({ status: "Se Guardo Correctamente"} )})
