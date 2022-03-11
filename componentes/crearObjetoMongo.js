@@ -31,7 +31,7 @@ export default function CrearObjetoMongo() {
     setObjeto({ ...objeto, [nombre]: value });
   };
   const onChangeValueSelect = (nombre, value) => {
-    setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
+    setObjeto({ ...objeto, [nombre]: JSON.stringify(value) });
   };
   const click = async () => {
     const res = await fetch("/api/solecc/"+tabla+"",

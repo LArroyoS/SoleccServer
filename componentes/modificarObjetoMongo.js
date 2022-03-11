@@ -31,7 +31,7 @@ export default function ModificarObjetoMongo() {
   };
 
   const onChangeValueSelect = (nombre, value) => {
-    setObjeto({ ...objeto, [nombre]: JSON.parse(value) });
+    setObjeto({ ...objeto, [nombre]: JSON.stringify(value) });
   };
   const click = async () => {
     if(id==""){
