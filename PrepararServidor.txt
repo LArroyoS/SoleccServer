@@ -1,0 +1,70 @@
+PrepararServidor
+------------------------------------------------------
+1.- Instalar Sistema Operativo Linux (Ubuntu)
+2.- Actualizar reporitorios
+ # apt update
+3.- Instalar nvm (control de veriosnes de nodejs)
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+4.- forzar configuracion en bash (variable global)
+# source ~/.bashrc
+5.- verificar que nvm se instale correctamente (ver comandos nvm)
+# nvm
+6.- instalar utima version de nodejs
+# nvm install node
+7.- verificar que se instalara node correctamente
+# node --version
+8.- instalar git
+# apt install git
+9.- Verificar que se isntalara git correctamente
+# git --version
+10.- crear carpeta donde se colocara la aplicacion y acceder a ella
+# mkdir solecc
+# cd solecc
+11.- clonar repositorio
+# git clone https://github.com/LArroyoS/SoleccServer.git
+12.- instalar dependencias npm
+# npm i
+13.- instalar de forma global pm2 (que se instale en todo el servidor)
+# npm install -g pm2
+14.- ejecutar aplicacion
+pm2 start "npm run dev" --name solecc
+----------------------------------------------------------
+Comandos pm2
+pm2 list
+pm2 status "appName"
+pm2 restart "appName"
+pm2 start "appName" o pm2 start "npm run dev" --name solecc
+pm2 stop "appName"
+
+/****************************************************
+Para ver cambios al actualizar la carpeta de la aplicacion hay que reiniciar el servicio mediante pm2 restart
+****************************************************/
+
+-------------------------------------------------------
+Manejo de servicios linux (mongodb)
+
+systemctl status [enabled] "servicio"
+systemctl restart [enabled] "servicio"
+systemctl start [enabled] "servicio"
+systemctl stop [enabled] "servicio"
+
+/***************************************************
+Enable se coloca para permitir que el servicio se ejecute al reinicier el servidor
+***************************************************/
+---------------------------------------------------------
+Comandos Git
+
+Actualiza repoitorio
+
+git fetch
+git pull
+/***************************************************
+Se recomienda modificar los archivos de manera local y subirlos a github para actualizar mediente los siguientes comandos
+****************************************************/
+---------------------------------------------------------
+Referencias:
+Preparar servidor
+https://www.youtube.com/watch?v=gmfUNDmJDuk
+nvm
+https://github.com/nvm-sh/nvm#installing-and-updating
+-------------------------------------------------------
