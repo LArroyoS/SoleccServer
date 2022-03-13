@@ -28,6 +28,36 @@ PrepararServidor
 # npm install -g pm2
 14.- ejecutar aplicacion
 pm2 start "npm run dev" --name solecc
+15.- Permitir que pm2 se inicie automaticamente al reinicio del servidor
+# pm2 startup systemd
+17.- instalar servidor nginx
+# apt install nginx
+18.- detenet apache 2
+# systemctl stop apache2.service
+# systemctl disabled apache2.service
+19.- Cambiar configuracion por defecto nginx
+# cd
+# cd /etc/nginx/sites-available
+# nano default
+19.1 Modificar archivo en el apartado location (redirecciona a la aplicacion correspondiente)
+ location / {
+  proxy_pass http://localhost:3000;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Conecction 'upgrade';
+  proxy_set_header Host $host;
+  proxy_cache_bypass $http_upgrade;
+ }
+ 
+/****************************************************
+guartdar cambios: ctl+o
+salir: ctl+x
+/****************************************************
+19.2 Verificar sintaxis de archivo
+# nginx -t
+20.- habilitar servicio nginx
+# systemctl enable nginx.service
+# systemctl start nginx.service
 ----------------------------------------------------------
 Comandos pm2
 pm2 list
@@ -35,18 +65,19 @@ pm2 status "appName"
 pm2 restart "appName"
 pm2 start "appName" o pm2 start "npm run dev" --name solecc
 pm2 stop "appName"
+pm2 startup systemd
 
 /****************************************************
 Para ver cambios al actualizar la carpeta de la aplicacion hay que reiniciar el servicio mediante pm2 restart
 ****************************************************/
 
 -------------------------------------------------------
-Manejo de servicios linux (mongodb)
+Manejo de servicios linux (mongodb/pm2)
 
-systemctl status [enabled] "servicio"
-systemctl restart [enabled] "servicio"
-systemctl start [enabled] "servicio"
-systemctl stop [enabled] "servicio"
+systemctl status [enabled] "servicio"            Verifica el estatus del servicio
+systemctl restart [enabled] "servicio"           reinicia el servicio 
+systemctl start [enabled] "servicio"             inicia el servicio
+systemctl stop [enabled] "servicio"              detiene el servicio
 
 /***************************************************
 Enable se coloca para permitir que el servicio se ejecute al reinicier el servidor
