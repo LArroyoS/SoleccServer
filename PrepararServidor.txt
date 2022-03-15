@@ -59,6 +59,44 @@ salir: ctl+x
 # systemctl enable nginx.service
 # systemctl start nginx.service
 ----------------------------------------------------------
+Permitir acceso cors
+Intercambio de Recursos de Origen Cruzado (CORS) es una característica de seguridad del navegador que restringe las solicitudes HTTP de origen cruzado que se inician desde secuencias de comandos que se ejecutan en el navegador. Si los recursos de la API REST reciben solicitudes HTTP complejas de varios orígenes, debe habilitar la compatibilidad con CORS.
+
+1.- instalar cors en projecto nextjs
+# npm i cors
+2.- importar cors en API
+
+import cors from "cors";
+
+3.- definir metodos compatibles
+
+// Initializing the cors middleware
+const cors = Cors({
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD'],
+})
+
+4.- Generar encabezado CORS
+
+
+// Helper method to wait for a middleware to execute before continuing
+// And to throw an error when an error happens in a middleware
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+      fn(req, res, (result) => {
+        if (result instanceof Error) {
+          return reject(result)
+        }
+  
+        return resolve(result)
+      })
+    })
+}
+
+5.- llamar a la funcion de encabezado cors antes de dar respuesta.
+ 
+await runMiddleware(req, res, cors)
+
+----------------------------------------------------------
 Comandos pm2
 pm2 list
 pm2 status "appName"
