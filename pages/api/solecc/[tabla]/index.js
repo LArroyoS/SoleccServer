@@ -13,7 +13,7 @@ export default async (req, res) => {
     //GET
         case "GET":
             const find = await Obj.find({})
-                .then((obj) => { res.status(200).json(obj)})
+                .then((obj) => { res.status(200).json( { status: obj })})
                 .catch((error) => { res.status(200).json({ status: error} )});
             break;
     //------------------------------------------------------------------------------------
