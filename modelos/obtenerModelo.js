@@ -134,7 +134,7 @@ const ToString = function(tabla,body){
             ver.title = body.nom_tipo;
             ver.subtitle = body.nom_tipo;
             break;
-        case "tipo_usuarios":
+        case "usuarios":
             ver.title = body.nom_usuario;
             ver.subtitle = body.nom_usuario;
             break;
