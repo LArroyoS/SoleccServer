@@ -3,24 +3,9 @@ import ObtenerModelo from "../../../../modelos/obtenerModelo";
 
 dbConexionSolecc();
 
-// Helper method to wait for a middleware to execute before continuing
-// And to throw an error when an error happens in a middleware
-function runMiddleware(req, res, fn) {
-    return new Promise((resolve, reject) => {
-      fn(req, res, (result) => {
-        if (result instanceof Error) {
-          return reject(result)
-        }
-  
-        return resolve(result)
-      })
-    })
-}
-
 //------------------------------------------------------------------------------------
 //Petición
 export default async(req, res) => {
-    await runMiddleware(req, res, cors)
 
     const { method, body, query } = req;
     const tabla = query["tabla"];
