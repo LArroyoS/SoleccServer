@@ -60,7 +60,7 @@ const Objeto = function(tabla){
         case "tipo_usuarios":
             return modeloTipoUsuario;
             break;
-        case "tipo_usuarios":
+        case "usuarios":
             return modeloUsuario;
             break;
         case "ventas":
