@@ -25,7 +25,7 @@ const modelo = {
       referencia: "",
     },
     direcciones_proveedores: {
-      id_usuario: "",
+      id_proveedor: "",
       pais: "",
       estado: "",
       domicilio: "",

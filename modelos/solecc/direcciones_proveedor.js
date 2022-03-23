@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const DireccionProveedorSchema = new mongoose.Schema({
-    id_usuario:{
+    id_proveedor:{
         type: String,
         required: true,
         trim: true
