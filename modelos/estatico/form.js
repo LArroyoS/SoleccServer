@@ -371,7 +371,7 @@ const form = {
 		{
 			"type":"text",
 			"titulo":"Tipo Pago",
-			"nombre":"nom_tipo_pago",
+			"nombre":"nom_tipo",
 			"icon":"puzzle-piece"
 		}
 	],
@@ -379,7 +379,7 @@ const form = {
 		{
 			"type":"text",
 			"titulo":"Tipo Usuario",
-			"nombre":"nom_tipo_usu",
+			"nombre":"nom_tipo",
 			"icon":"puzzle-piece"
 		}
 	],
