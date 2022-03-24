@@ -16,6 +16,7 @@ export default function PruebaPeticion() {
       rutaConstante : rutaConstante+valor
     );
   }
+  
   const click = async () => {
     if(metodo=="Nula"){
       setRespuesta("Seleccione una opcion");
