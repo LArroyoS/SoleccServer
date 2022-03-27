@@ -7,6 +7,7 @@ import EliminarObjetoMongo from "../componentes/eliminarObjetoMongo";
 import ConsultarObjetoMongo from "../componentes/consultarObjetoMongo";
 import PruebaMongo from "../componentes/pruebaMongo";
 import PruebaQR from "../componentes/PruebaQR";
+import PruebaPDF from "../componentes/PruebaPDF";
 
 export default function Home() {
 
@@ -38,6 +39,9 @@ export default function Home() {
       case 7: case "7":
         return (<PruebaQR></PruebaQR>);
       break;
+      case 8: case "8":
+        return (<PruebaPDF></PruebaPDF>);
+      break;
       default:
         return (<p>Se reconoce componente {componente} como {typeof(componente)} </p>)
       break;
@@ -53,6 +57,7 @@ export default function Home() {
         <option value={5}>Consultar Objeto Formularios</option>
         <option value={6}>Eliminar Objetos Formularios</option>
         <option value={7}>Prueba QR</option>
+        <option value={8}>Prueba PDF</option>
       </select>
       <p> {componente} </p>
       { vista() }

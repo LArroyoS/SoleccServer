@@ -7,12 +7,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react-qr-code":"*",
     "cors": "^2.8.5",
+    "jspdf": "^2.5.1",
     "mongoose": "^6.2.4",
     "next": "^12.1.0",
+    "qrcode": "^1.5.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-qr-code": "*"
   },
   "devDependencies": {
     "eslint": "8.7.0",
