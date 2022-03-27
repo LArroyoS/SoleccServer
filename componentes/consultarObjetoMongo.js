@@ -37,7 +37,7 @@ export default function ConsultarObjetoMongo() {
   return (
     <div>
       <h1>Consulta Objeto</h1>
-      <label>Tipo de peticion</label>
+      <label>Tipo de tabla</label>
       <select name="peticion" onChange={cambio}>
         <option value="">--Seleccione un tabla--</option>
         { opciones() }

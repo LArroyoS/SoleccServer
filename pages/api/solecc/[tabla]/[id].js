@@ -18,7 +18,7 @@ export default async(req, res) => {
         case "GET":
             const find = await Obj.findById(id)
                 .then((obj) => { res.status(200).json({ status: obj })})
-                .catch((error) => { rres.status(200).json({ status: error} )});
+                .catch((error) => { res.status(200).json({ status: error} )});
             break;
     //------------------------------------------------------------------------------------
     //POST/PUT

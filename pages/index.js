@@ -8,6 +8,7 @@ import ConsultarObjetoMongo from "../componentes/consultarObjetoMongo";
 import PruebaMongo from "../componentes/pruebaMongo";
 import PruebaQR from "../componentes/PruebaQR";
 import PruebaPDF from "../componentes/PruebaPDF";
+import CrearQR from "../componentes/crearQR";
 
 export default function Home() {
 
@@ -42,6 +43,9 @@ export default function Home() {
       case 8: case "8":
         return (<PruebaPDF></PruebaPDF>);
       break;
+      case 9: case "9":
+        return (<CrearQR></CrearQR>);
+      break;
       default:
         return (<p>Se reconoce componente {componente} como {typeof(componente)} </p>)
       break;
@@ -58,6 +62,7 @@ export default function Home() {
         <option value={6}>Eliminar Objetos Formularios</option>
         <option value={7}>Prueba QR</option>
         <option value={8}>Prueba PDF</option>
+        <option value={9}>Generar QR tabla solecc</option>
       </select>
       <p> {componente} </p>
       { vista() }

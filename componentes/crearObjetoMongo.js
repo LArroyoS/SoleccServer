@@ -50,7 +50,7 @@ export default function CrearObjetoMongo() {
   return (
     <div>
       <h1>Crear Objeto</h1>
-      <label>Tipo de peticion</label>
+      <label>Tipo de Tabla</label>
       <select name="peticion" onChange={cambio}>
         <option value="">--Seleccione un tabla--</option>
         { opciones() }
