@@ -1,4 +1,5 @@
 import { jsPDF } from "jspdf";
+import btoa from "btoa";
 
 const createPDF = () => {
     const doc = new jsPDF();
