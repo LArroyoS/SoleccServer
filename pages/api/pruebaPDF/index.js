@@ -10,8 +10,8 @@ const createPDF = () => {
 }
 
 export default function Index(req, res){
-    const pdf = createPDF();
+    //const pdf = createPDF();
     res.status(200).json({ 
-        PDF: pdf
+        PDF: "PDF"
     });
 }
