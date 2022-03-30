@@ -33,7 +33,7 @@ export default function PruebaQR() {
       <h1>Prueba PDF</h1>
       <button onClick={click} >Generar PDF</button>
       <button onClick={click2} >Borrar</button>
-      <p>{createPDF}</p>
+      <p>{JSON.stringify(createPDF)}</p>
       {verPDF(createPDF)}
     </div>
   )
