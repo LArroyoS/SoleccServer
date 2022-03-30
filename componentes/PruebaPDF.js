@@ -12,8 +12,8 @@ export default function PruebaQR() {
         method: "GET",
       }
     );
-    const data = await res.json();
-    setPDF(data.PDF);
+    const file = await res.json();
+    setPDF( "data:"+file.data+";"+file.encoding+","+file.base64);
   }
   const click2 = async () => {
     setPDF(null);
