@@ -27,15 +27,21 @@ export default function ProbarSesion() {
         setObjeto({ ...objeto, [nombre]: value });
     };
     const click = async() => {
-        const res = await fetch("/api/solecc/usuarios/",
-        { 
-            method: "GET",
-            headers: {
-              'Content-Type': 'application/json',
-            },
-        });
-        const data = await res.json();
-        setRespuesta(data);
+        if(objeto.email_usuario=="" && objeto.pass_usuario==""){
+            setRespuesta({ status: "Los campos estan vacios" })
+        }
+        else{
+            const res = await fetch("/api/sesionSolecc/",
+            { 
+                method: "POST",
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(objeto)
+            });
+            const data = await res.json();
+            setRespuesta(data);
+        }
     }
 
     return (
