@@ -30,9 +30,7 @@ export default function ProbarSesion() {
         setObjeto({ ...objeto, [nombre]: value });
     };
     const click = async() => {
-        const res = await fetch("/api/solecc/usuarios/6238d2bb32cdd4843d33d9ba");
-        const data = await res.json();
-        setRespuesta(data);
+        alert("click");
     }
 
     return (
