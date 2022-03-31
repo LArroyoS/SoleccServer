@@ -48,7 +48,7 @@ export default function ProbarSesion() {
             />
             <br/>
             <button onClick={click}> Guardar </button>
-            <h2>{ respuesta }</h2>
+            <h2>{ JSON.stringify(respuesta) }</h2>
         </div>
     )
 }
