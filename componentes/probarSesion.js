@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import ConstruirFormulario from "./crearFormulario";
 
-const form = [
-    {
-        "type":"text",
-        "titulo":"Correo",
-        "nombre":"email_usuario",
-        "icon":"puzzle-piece"
-    },
-    {
-        "type":"text",
-        "titulo":"Contraseña",
-        "nombre":"pass_usuario",
-        "icon":"puzzle-piece"
-    },
-];
-
 export default function ProbarSesion() {
+    const form = [
+        {
+            "type":"text",
+            "titulo":"Correo",
+            "nombre":"email_usuario",
+            "icon":"puzzle-piece"
+        },
+        {
+            "type":"text",
+            "titulo":"Contraseña",
+            "nombre":"pass_usuario",
+            "icon":"puzzle-piece"
+        },
+    ];
+    
     const [ respuesta, setRespuesta ] = useState(undefined);
     const [ objeto, setObjeto ] = useState({
         email_usuario: "",
@@ -26,11 +26,8 @@ export default function ProbarSesion() {
     const onChangeValue = (nombre, value) => {
         setObjeto({ ...objeto, [nombre]: value });
     };
-    const onChangeValueSelect = (nombre, value) => {
-        setObjeto({ ...objeto, [nombre]: value });
-    };
     const click = async() => {
-        const res = await fetch("/api/solecc/usuarios/6238d2bb32cdd4843d33d9ba",
+        const res = await fetch("/api/solecc/usuarios/",
         { 
             method: "GET",
             headers: {
@@ -48,7 +45,6 @@ export default function ProbarSesion() {
                 formulario={form}
                 state={objeto}
                 onChangeValue={onChangeValue}
-                onChangeValueSelect={onChangeValueSelect}
             />
             <br/>
             <button onClick={click}> Guardar </button>

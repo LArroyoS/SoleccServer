@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import QRCode from "qrcode";
 
 export default function PruebaQR() {
   const [ QR, setQR ] = useState(null);
