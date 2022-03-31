@@ -36,7 +36,7 @@ export default function ProbarSesion() {
             'Content-Type': 'application/json',
             },
             method: "POST",
-            body: JSON.stringify(sesion)
+            body: JSON.stringify(objeto)
         }
         );
         const data = await res.json();
