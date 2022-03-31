@@ -17,11 +17,11 @@ const form = [
 ];
 
 export default function ProbarSesion() {
+    const [ respuesta, setRespuesta ] = useState(undefined);
     const [ objeto, setObjeto ] = useState({
         email_usuario: "",
         pass_usuario: ""
     });
-    const [ respuesta, setRespuesta ] = useState(undefined);
 
     const onChangeValue = (nombre, value) => {
         setObjeto({ ...objeto, [nombre]: value });
@@ -44,7 +44,7 @@ export default function ProbarSesion() {
                 onChangeValue={onChangeValue}
                 onChangeValueSelect={onChangeValueSelect}
             />
-            <button type="button" onClick={click}> Guardar </button>
+            <button onClick={click}> Guardar </button>
             <h2>{ respuesta }</h2>
         </div>
     )
