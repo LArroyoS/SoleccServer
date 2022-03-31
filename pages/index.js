@@ -67,6 +67,7 @@ export default function Home() {
         <option value={7}>Prueba QR</option>
         <option value={8}>Prueba PDF</option>
         <option value={9}>Generar QR tabla solecc</option>
+        <option value={10}>Prueba Sesion</option>
       </select>
       <p> {componente} </p>
       { vista() }
