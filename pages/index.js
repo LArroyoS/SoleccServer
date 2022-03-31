@@ -9,6 +9,7 @@ import PruebaMongo from "../componentes/pruebaMongo";
 import PruebaQR from "../componentes/PruebaQR";
 import PruebaPDF from "../componentes/PruebaPDF";
 import CrearQR from "../componentes/crearQR";
+import ProbarSesion from "../componentes/probarSesion";
 
 export default function Home() {
 
@@ -45,6 +46,9 @@ export default function Home() {
       break;
       case 9: case "9":
         return (<CrearQR></CrearQR>);
+      break;
+      case 10: case "10":
+        return (<ProbarSesion></ProbarSesion>);
       break;
       default:
         return (<p>Se reconoce componente {componente} como {typeof(componente)} </p>)
