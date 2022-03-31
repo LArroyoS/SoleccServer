@@ -45,6 +45,7 @@ export default function ProbarSesion() {
 
     return (
         <div>
+            <p>{ JSON.stringify(objeto) }</p>
             <ConstruirFormulario
                 formulario={form}
                 state={objeto}
