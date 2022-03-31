@@ -30,8 +30,17 @@ export default function ProbarSesion() {
         setObjeto({ ...objeto, [nombre]: value });
     };
     const click = async() => {
-        
-        setRespuesta("ff");
+        const res = await fetch("/api/usuarios/6238d2bb32cdd4843d33d9ba",
+        {
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            method: "POST",
+            body: JSON.stringify(objeto)
+        }
+        );
+        const data = await res.json();
+        setRespuesta(data.status);
     }
 
     return (
