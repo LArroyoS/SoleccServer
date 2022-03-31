@@ -44,7 +44,7 @@ export default function ProbarSesion() {
                 onChangeValue={onChangeValue}
                 onChangeValueSelect={onChangeValueSelect}
             />
-            <button type="button" onClick={click}> Guardar </button>
+            <button type="button" onClick={() => click()}> Guardar </button>
             <h2>{ respuesta }</h2>
         </div>
     )
