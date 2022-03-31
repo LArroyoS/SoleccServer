@@ -1,5 +1,5 @@
-import dbConexionSolecc from "../../../../utilidades/conexionSolecc";
-import ObtenerModelo from "../../../../modelos/obtenerModelo";
+import dbConexionSolecc from "../../../utilidades/conexionSolecc";
+import ObtenerModelo from "../../../modelos/obtenerModelo";
 
 dbConexionSolecc();
 
