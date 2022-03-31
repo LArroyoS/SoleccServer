@@ -30,7 +30,13 @@ export default function ProbarSesion() {
         setObjeto({ ...objeto, [nombre]: value });
     };
     const click = async() => {
-        const res = await fetch("/api/solecc/usuarios/6238d2bb32cdd4843d33d9ba");
+        const res = await fetch("/api/solecc/usuarios/6238d2bb32cdd4843d33d9ba",
+        { 
+            method: "GET",
+            headers: {
+              'Content-Type': 'application/json',
+            },
+        });
         const data = await res.json();
         setRespuesta(data);
     }
@@ -44,6 +50,7 @@ export default function ProbarSesion() {
                 onChangeValue={onChangeValue}
                 onChangeValueSelect={onChangeValueSelect}
             />
+            <br/>
             <button onClick={click}> Guardar </button>
             <h2>{ respuesta }</h2>
         </div>
