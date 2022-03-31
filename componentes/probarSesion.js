@@ -30,17 +30,8 @@ export default function ProbarSesion() {
         setObjeto({ ...objeto, [nombre]: value });
     };
     const click = async() => {
-        const res = await fetch("/api/sesionSolecc/",
-        {
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            method: "POST",
-            body: JSON.stringify(objeto)
-        }
-        );
-        const data = await res.json();
-        setRespuesta(data.status);
+        
+        setRespuesta("ff");
     }
 
     return (
