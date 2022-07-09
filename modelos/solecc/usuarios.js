@@ -36,6 +36,14 @@ const UsuarioSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    terminosYCondiciones:{
+        type: Boolean,
+        default: false,
+    },
+    cambiarPassword:{
+        type: Boolean,
+        default: true,
+    },
     toString:{
         type: Object
     }
