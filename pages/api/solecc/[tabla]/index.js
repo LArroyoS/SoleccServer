@@ -15,7 +15,7 @@ export default async (req, res) => {
         case "GET":
             const find = await Obj.find({})
                 .then((obj) => { res.status(200).json( { status: obj })})
-                .catch((error) => { res.status(200).json({ status: error} )});
+                .catch((error) => { res.status(200).json({ status: undefined} )});
             break;
     //------------------------------------------------------------------------------------
     //POST/PUT
