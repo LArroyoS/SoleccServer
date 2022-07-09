@@ -1,3 +1,4 @@
+import Notas from "./notas";
 import Almacenes from "./solecc/almacen";
 import modeloCategoria from "./solecc/categorias";
 import modeloComprobanteEntrada from "./solecc/comprobantes_entradas";
@@ -66,7 +67,7 @@ const Objeto = function(tabla){
             return modeloVenta;
             break;
         default:
-            return undefined;
+            return Notas;
             break;
     }
 }
