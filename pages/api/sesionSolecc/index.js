@@ -6,20 +6,23 @@ dbConexionSolecc();
 export default async (req, res) => {
 
     const { method, body } = req;
-    const tabla1 = "usuarios";
-    const Obj1 = ObtenerModelo.Objeto(tabla);
-    const tabla2 = "usuarios";
-    const Obj2 = ObtenerModelo.Objeto(tabla);
-    let status = null;
+    const Obj1 = ObtenerModelo.Objeto("usuarios");
+    const Obj2 = ObtenerModelo.Objeto("tipo_usuarios");
+    let status = {};
     switch (method) {
     //------------------------------------------------------------------------------------
     //POST/PUT
         case "POST": case "PUT":
-            const usuario = await Obj1.findOne(body)
+            await Obj1.findOne(body)
                 .then((obj) => { status = { status: obj } } )
-                .catch((error) => { status = { status: false } } );
+                .catch((error) => { status = { status: error } } );
+            if(status.has("status")){
+                await Obj2.findById(status.status.id_tipo_usuario)
+                    .then((obj) => { status.rol = obj.nom_tipo })
+                    .catch((error) => { status.rol = "Colaborador" });
+            }
             res.status(200).json(status);
-            break;
+                break;
     //------------------------------------------------------------------------------------
     //Metodo desonocido
         default:
