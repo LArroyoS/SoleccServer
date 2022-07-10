@@ -31,7 +31,7 @@ export default function ProbarSesion() {
             setRespuesta({ status: "Los campos estan vacios" })
         }
         else{
-            const res = await fetch("/api/sesionSolecc/",
+            const res = await fetch("/api/sesionSolecc",
             { 
                 method: "POST",
                 headers: {
