@@ -21,7 +21,7 @@ export default async (req, res) => {
                     .then((obj) => { status.rol = obj.nom_tipo })
                     .catch((error) => { status.rol = "Colaborador" });
             }
-            res.status(200).json(status);
+            res.status(200).json({status});
                 break;
     //------------------------------------------------------------------------------------
     //Metodo desonocido
