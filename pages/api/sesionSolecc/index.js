@@ -13,7 +13,9 @@ export default async (req, res) => {
     //------------------------------------------------------------------------------------
     //POST/PUT
         case "POST": case "PUT":
-            res.status(400).json({ success: true });
+            const find = await Obj.findOne(body)
+                .then((obj) => { res.status(200).json( { status: obj })})
+                .catch((error) => { res.status(200).json({ status: false} )});
             break;
     //------------------------------------------------------------------------------------
     //Metodo desonocido
