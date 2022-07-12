@@ -7,6 +7,11 @@ dbConexionSolecc();
 //Petición
 export default async(req, res) => {
 
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
     const { method, body, query } = req;
     const tabla = query["tabla"];
     const id = query["id"];
