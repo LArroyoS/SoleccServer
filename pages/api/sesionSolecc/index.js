@@ -5,12 +5,6 @@ dbConexionSolecc();
 
 export default async (req, res) => {
 
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-    );
-    
     const { method, body } = req;
     const Obj1 = ObtenerModelo.Objeto("usuarios");
     const Obj2 = ObtenerModelo.Objeto("tipo_usuarios");
