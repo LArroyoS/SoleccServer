@@ -1,9 +1,28 @@
 import dbConexionSolecc from "../../../../utilidades/conexionSolecc";
 import ObtenerModelo from "../../../../modelos/obtenerModelo";
+import Cors from "cors";
 
+const cors = Cors({
+    methods: ['POST', 'GET', 'HEAD'],
+})
+
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+        fn(req, res, (result) => {
+        if (result instanceof Error) {
+            return reject(result)
+        }
+
+        return resolve(result)
+        })
+    })
+}
+  
 dbConexionSolecc();
 
 export default async (req, res) => {
+
+    await runMiddleware(req, res, cors);
 
     const { method, body, query } = req;
     const tabla = query["tabla"];
@@ -14,8 +33,8 @@ export default async (req, res) => {
     //GET
         case "GET":
             const find = await Obj.find({})
-                .then((obj) => { res.status(200).json( { status: obj })})
-                .catch((error) => { res.status(200).json({ status: undefined} )});
+                .then((obj) => { res.status(200).json( { status: obj } )})
+                .catch((error) => { res.status(200).json( { status: undefined} )});
             break;
     //------------------------------------------------------------------------------------
     //POST/PUT

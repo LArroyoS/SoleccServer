@@ -1,5 +1,20 @@
 import dbConexionSolecc from "../../../../utilidades/conexionSolecc";
 import ObtenerModelo from "../../../../modelos/obtenerModelo";
+const cors = Cors({
+    methods: ['POST', 'GET', 'HEAD'],
+})
+
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+        fn(req, res, (result) => {
+        if (result instanceof Error) {
+            return reject(result)
+        }
+
+        return resolve(result)
+        })
+    })
+}
 
 dbConexionSolecc();
 
@@ -7,6 +22,8 @@ dbConexionSolecc();
 //Petición
 export default async(req, res) => {
 
+    await runMiddleware(req, res, cors);
+    
     const { method, body, query } = req;
     const tabla = query["tabla"];
     const id = query["id"];
