@@ -1,6 +1,5 @@
 import dbConexionSolecc from "../../../utilidades/conexionSolecc";
 import ObtenerModelo from "../../../modelos/obtenerModelo";
-/*
 const cors = Cors({
     methods: ['POST', 'GET', 'HEAD'],
 })
@@ -16,13 +15,12 @@ function runMiddleware(req, res, fn) {
         })
     })
 }
-*/
 
 dbConexionSolecc();
 
 export default async (req, res) => {
 
-    //await runMiddleware(req, res, cors);
+    await runMiddleware(req, res, cors);
     
     const { method, body } = req;
     const Obj1 = ObtenerModelo.Objeto("usuarios");
