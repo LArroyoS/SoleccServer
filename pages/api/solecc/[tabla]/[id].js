@@ -1,5 +1,7 @@
 import dbConexionSolecc from "../../../../utilidades/conexionSolecc";
 import ObtenerModelo from "../../../../modelos/obtenerModelo";
+import Cors from "cors";
+
 const cors = Cors({
     methods: ['POST', 'GET', 'HEAD'],
 });

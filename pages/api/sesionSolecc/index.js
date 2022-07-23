@@ -1,5 +1,7 @@
 import dbConexionSolecc from "../../../utilidades/conexionSolecc";
 import ObtenerModelo from "../../../modelos/obtenerModelo";
+import Cors from "cors";
+
 const cors = Cors({
     methods: ['POST', 'GET', 'HEAD'],
 })
@@ -33,11 +35,6 @@ export default async (req, res) => {
             await Obj1.findOne(body)
                 .then((obj) => { status = { status: obj } } )
                 .catch((error) => { status = { status: false } } );
-            if(status.status){
-                await Obj2.findById(status.status.id_tipo_usuario)
-                    .then((obj) => { status.rol = obj.nom_tipo })
-                    .catch((error) => { status.rol = "Colaborador" });
-            }
             res.status(200).json(status);
             break;
     //------------------------------------------------------------------------------------
