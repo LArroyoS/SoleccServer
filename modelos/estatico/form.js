@@ -287,12 +287,6 @@ const form = {
 			"nombre":"detalle",
 			"icon":"puzzle-piece"
 		},
-		{
-			"type":"text",
-			"titulo":"QR",
-			"nombre":"qr_producto",
-			"icon":"puzzle-piece"
-		}
 	],
 	"proveedores": [
 		{

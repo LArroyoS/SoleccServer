@@ -59,7 +59,6 @@ const modelo = {
       descripcion_l: "",
       prec_compra: "",
       detalle: "",
-      qr_producto: "",
     },
     proveedores: {
       nom_proveedor: "",

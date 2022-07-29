@@ -37,11 +37,6 @@ const ProductosSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    qr_producto:{
-        type: Boolean,
-        required: true,
-        trim: true
-    },
     activo:{
         type: Boolean,
         required: true,
